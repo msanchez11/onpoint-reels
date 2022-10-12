@@ -1,0 +1,64 @@
+{
+    "people": [
+        {
+            "name": "Carlos Souza",
+            "alias": "Carlos S",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "RRHH"
+        },
+        {
+            "name": "Javier Milei",
+            "alias": "Milei",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Politico"
+        },
+        {
+            "name": "Matias Sanchez",
+            "alias": "Matias S",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Desarrollador"
+        },
+        {
+            "name": "Domingo Peron",
+            "alias": "Peron",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Politico"
+        },
+        {
+            "name": "Norberto Battaglino",
+            "alias": "Chichi",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Inmobiliario"
+        },
+        {
+            "name": "Emiliano Martinez",
+            "alias": "El Dibu",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Futbolista"
+        },
+        {
+            "name": "Lionel Messi",
+            "alias": "Lio Messi",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "GOAT"
+        },
+        {
+            "name": "Emiliano Pinzon",
+            "alias": "Pinzon E",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Periodista"
+        },
+        {
+            "name": "Diego Forlan",
+            "alias": "Forlan",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Delantero"
+        },
+        {
+            "name": "Luis Suarez",
+            "alias": "Lucho9",
+            "avatar": "/assets/Avatars/example.png",
+            "area": "Goleador"
+        }
+    ]
+}

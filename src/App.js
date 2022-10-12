@@ -1,9 +1,10 @@
 import './App.css';
+import StoriesContainer from './components/StoriesContainer'
 
 function App() {
   return (
     <div className="app-body">
-      <h1>Hello OnPoint</h1>
+      <StoriesContainer/>
     </div>
   );
 }
