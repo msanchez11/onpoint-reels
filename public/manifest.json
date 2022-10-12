@@ -3,8 +3,8 @@
   "name": "Desktop & Mobile Reels for OnPoint sites.",
   "icons": [
     {
-      "src": "favicon.ico",
-      "type": "image/x-icon"
+      "src": "favicon.png",
+      "type": "image/png"
     }
   ],
   "start_url": ".",
