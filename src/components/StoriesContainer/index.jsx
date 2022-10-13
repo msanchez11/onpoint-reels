@@ -14,7 +14,7 @@ const StoriesContainer = () => {
                     <div className='photo-container'>
                         <img className='person-photo' src={item.avatar} alt={item.name} />
                     </div>
-                    <span className='person-name'>{item.alias}</span>
+                    <span className='person-name'>{item.name}</span>
                     <span className='person-area'>{item.area}</span>
                 </div>
             ))}    
