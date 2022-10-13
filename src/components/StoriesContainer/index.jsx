@@ -5,21 +5,30 @@ const StoriesContainer = () => {
 
     const triggerModal = () => {
         window.alert('⚠️MODAL CON REELS ABIERTO⚠️')
-    }
+    };
+    const triggerLogin = () => {
+        window.alert('⚠️INCENTIVO DE LOGIN ABIERTO⚠️')
+    };
 
     return(
-        <div className="people-wrapper">
-            {data.people.map((item, i) => (
-                <div key={i} className='person-wrapper' onClick={triggerModal}>
-                    <div className='photo-container'>
-                        <img className='person-photo' src={item.avatar} alt={item.name} />
+    <div className="stories-wrapper">
+        <div className="stories-header">
+            <span>CREATORS BUZZ</span>
+            <span className='see-all' onClick={triggerLogin}> SEE ALL</span>
+        </div>
+        <div className="stories-people-wrapper">
+            {data.people.map(item => (
+                <div key={item.id} className='stories-person-wrapper' onClick={triggerModal}>
+                    <div className='stories-photo-container'>
+                        <img className='stories-person-photo' src={item.avatar} alt={item.name} />
                     </div>
-                    <span className='person-name'>{item.name}</span>
-                    <span className='person-area'>{item.area}</span>
+                    <span className='stories-person-name'>{item.name}</span>
+                    <span className='stories-person-area'>{item.area}</span>
                 </div>
             ))}    
         </div>
-    )
+    </div>
+)
 };
 
 export default StoriesContainer;
