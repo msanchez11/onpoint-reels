@@ -1,0 +1,35 @@
+{
+  "1920": {
+    "slidesPerView": 10
+  },
+  "1600": {
+    "slidesPerView": 9
+  },
+  "1440": {
+    "slidesPerView": 8
+  },
+  "1200": {
+    "slidesPerView": 7
+  },
+  "992": {
+    "slidesPerView": 6
+  },
+  "768": {
+    "slidesPerView": 5
+  },
+  "600": {
+    "slidesPerView": 5
+  },
+  "480": {
+    "slidesPerView": 4
+  },
+  "375": {
+    "slidesPerView": 3
+  },
+  "200": {
+    "slidesPerView": 2
+  },
+  "50": {
+    "slidesPerView": 1
+  }
+}

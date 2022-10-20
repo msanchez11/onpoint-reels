@@ -1,8 +1,5 @@
-.app-body{
-  width: 100vw;
-}
-.separator{
-  width: 100v;
-  height: 100px;
-  background-color: aliceblue;
+.stories-body {
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
 }

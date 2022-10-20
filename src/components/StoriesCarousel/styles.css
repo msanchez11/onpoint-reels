@@ -1,0 +1,79 @@
+.all-stories-wrapper {
+  display: block;
+}
+.stories-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.stories-header span {
+  font-weight: 700;
+  color: rgb(141, 140, 140);
+  margin: 10px;
+}
+.stories-header .see-all {
+  font-weight: 700;
+  color: #51d0f7;
+  text-decoration: none;
+  cursor: pointer;
+}
+.stories-person-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.stories-photo-container {
+  width: 6.25em;
+  display: flex;
+  justify-content: center;
+  padding: 0.625em 0;
+}
+.stories-person-photo {
+  width: 6.75em;
+  height: 6.75em;
+  padding: 0.125em;
+  border: 0.125em solid #21daf3;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+.stories-person-photo:hover {
+  width: 7.25em;
+  height: 7.25em;
+  margin-bottom: 0px;
+}
+.stories-person-name {
+  font-weight: 700;
+}
+.stories-person-area {
+  font-weight: 300;
+  text-align: center;
+}
+
+/* Swiper Css Modificators */
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+.swiper-wrapper {
+  margin-bottom: 30px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background-color: white;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 10px;
+}
+
+@media only screen and (max-width: 820px) {
+  .swiper-scrollbar {
+    display: none;
+  }
+}
