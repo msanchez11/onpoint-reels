@@ -1,4 +1,3 @@
-// import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -6,42 +5,51 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import data from "../../db/database.json";
-import breakpointConfig from "../../configs/storiesSwiperConfig.json";
+import breakpointConfig from "../../configs/shortsSwiperConfig.json";
 import "./styles.css";
 
-const StoriesCarousel = (props) => {
+const ShortsCarousel = (props) => {
   const { changeOpenValue } = props;
   const triggerLogin = () => {
     window.alert("⚠️INCENTIVO DE LOGIN ABIERTO⚠️");
   };
 
   return (
-    <div className="all-stories-wrapper">
-      <div className="stories-header">
-        <span>CREATORS BUZZ</span>
+    <div className="shorts-main-wrapper">
+      <div className="shorts-header">
+        <span>SUGGESTED CREATORS FOR YOU</span>
         <span className="see-all" onClick={triggerLogin}>
           SEE ALL
         </span>
       </div>
       <Swiper
+        className="shorts-carrousel"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={0}
         breakpoints={breakpointConfig}
+        spaceBetween={0}
         navigation
-        scrollbar={{ draggable: true }}
       >
+        {/* {data.people.map((item) => ( */}
         {data.people.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="stories-person-wrapper" onClick={changeOpenValue}>
-              <div className="stories-photo-container">
+          <SwiperSlide key={item.id} onClick={changeOpenValue}>
+            <div className="short-video-wrapper">
+              <video
+                className="boomerang-video"
+                autoPlay
+                muted
+                loop
+                src={item.boomerang}
+                type="video/mp4"
+              ></video>
+              <div className="polarized" />
+              <div className="short-person-wrapper">
                 <img
-                  className="stories-person-photo"
+                  className="person-photo"
                   src={item.avatar}
                   alt={item.name}
                 />
+                <span className="person-name">{item.name}</span>
               </div>
-              <span className="stories-person-name">{item.name}</span>
-              <span className="stories-person-area">{item.area}</span>
             </div>
           </SwiperSlide>
         ))}
@@ -50,4 +58,4 @@ const StoriesCarousel = (props) => {
   );
 };
 
-export default StoriesCarousel;
+export default ShortsCarousel;

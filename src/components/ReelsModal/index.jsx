@@ -1,6 +1,6 @@
 //import data from "../../db/database.json";
 import ReactModal from "react-modal";
-import StoriesCarousel from "../StoriesCarousel";
+import ShortsCarousel from "../ShortsCarousel";
 import closeIcon from "../../assets/close.svg";
 import stylesCfg from "../../configs/modalStylesConfig.json";
 import "./styles.css";
@@ -23,7 +23,7 @@ const ReelsModal = (props) => {
         <div className="close-container">
           <img src={closeIcon} alt="X" onClick={changeOpenValue} />
         </div>
-        <StoriesCarousel />
+        <ShortsCarousel />
       </ReactModal>
     </div>
   );
