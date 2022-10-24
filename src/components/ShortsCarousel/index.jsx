@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -24,12 +24,11 @@ const ShortsCarousel = (props) => {
       </div>
       <Swiper
         className="shorts-carrousel"
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Scrollbar]}
         breakpoints={breakpointConfig}
-        spaceBetween={0}
+        breakpointsBase={"window"}
         navigation
       >
-        {/* {data.people.map((item) => ( */}
         {data.people.map((item) => (
           <SwiperSlide key={item.id} onClick={changeOpenValue}>
             <div className="short-video-wrapper">
@@ -41,7 +40,6 @@ const ShortsCarousel = (props) => {
                 src={item.boomerang}
                 type="video/mp4"
               ></video>
-              <div className="polarized" />
               <div className="short-person-wrapper">
                 <img
                   className="person-photo"

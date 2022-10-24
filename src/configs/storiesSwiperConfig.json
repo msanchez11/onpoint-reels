@@ -12,24 +12,42 @@
     "slidesPerView": 7
   },
   "992": {
+    "slidesPerView": 6.5
+  },
+  "900": {
     "slidesPerView": 6
   },
+  "800": {
+    "slidesPerView": 5.4
+  },
   "768": {
+    "slidesPerView": 5.2
+  },
+  "700": {
     "slidesPerView": 5
   },
   "600": {
-    "slidesPerView": 5
+    "slidesPerView": 4.8
+  },
+  "550": {
+    "slidesPerView": 4.2
   },
   "480": {
-    "slidesPerView": 4
+    "slidesPerView": 3.6
+  },
+  "400": {
+    "slidesPerView": 3.2
   },
   "375": {
-    "slidesPerView": 3
+    "slidesPerView": 2.8
+  },
+  "300": {
+    "slidesPerView": 2.2
   },
   "200": {
-    "slidesPerView": 2
+    "slidesPerView": 1.5
   },
-  "50": {
+  "100": {
     "slidesPerView": 1
   }
 }

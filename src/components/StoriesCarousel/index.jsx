@@ -1,5 +1,5 @@
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -24,8 +24,8 @@ const StoriesCarousel = (props) => {
         </span>
       </div>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={0}
+        className="stories-carrousel"
+        modules={[Navigation, Scrollbar]}
         breakpoints={breakpointConfig}
         navigation
         scrollbar={{ draggable: true }}
