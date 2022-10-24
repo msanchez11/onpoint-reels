@@ -1,114 +1,114 @@
 {
-    "people": [
-        {
-            "id": 1,
-            "name": "Beccalways",
-            "area": "Lifestyle",
-            "avatar": "/assets/story1/Story_0001_Beccalways_Avatar.jpg",
-            "boomerang": "/assets/story1/Story_0001_Beccalways_Boomerang.mp4",
-            "reel-cover": "/assets/story1/Story_0001_Beccalways_Cover.jpg",
-            "video": "/assets/story1/Story_0001_Beccalways.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 2,
-            "name": "JanisTrue",
-            "area": "Beauty & Care",
-            "avatar": "/assets/story2/Story_0002_Janistrue_Avatar.jpg",
-            "boomerang": "/assets/story2/Story_0002_Janistrue_Boomerang.mp4",
-            "reel-cover": "/assets/story2/Story_0002_Janistrue_Cover.jpg",
-            "video": "/assets/story2/Story_0002_Janistrue.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 3,
-            "name": "Noel D",
-            "area": "Bodybuilding",
-            "avatar": "/assets/story3/Story_0003_Noel-Deyzel_Avatar.jpeg",
-            "boomerang": "/assets/story3/Story_0003_Noel-Deyzel_Boomerang.mp4",
-            "reel-cover": "/assets/story3/Story_0003_Noel-Deyzel_Cover.jpg",
-            "video": "/assets/story3/Story_0003_Noel-Deyzel.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 4,
-            "name": "Tatiana L",
-            "area": "Fitness",
-            "avatar": "/assets/story4/Story_0004_Tatiana-Lares_Avatar.jpg",
-            "boomerang": "/assets/story4/Story_0004_Tatiana-Lares_Boomerang.mp4",
-            "reel-cover": "/assets/story4/Story_0004_Tatiana-Lares_Cover.jpg",
-            "video": "/assets/story4/Story_0004_Tatiana-Lares.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 5,
-            "name": "Andy Fvng",
-            "area": "Healthy Eating",
-            "avatar": "/assets/story5/Story_0005_Andy-Fvng_Avatar.jpeg",
-            "boomerang": "/assets/story5/Story_0005_Andy-Fvng_Boomerang.mp4",
-            "reel-cover": "/assets/story5/Story_0005_Andy-Fvng_Cover.jpg",
-            "video": "/assets/story5/Story_0005_Andy-Fvng.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 6,
-            "name": "TherapyJeff",
-            "area": "Healthy Eating",
-            "avatar": "/assets/story6/Story_0006_TherapyJeff_Avatar.jpg",
-            "boomerang": "/assets/story6/Story_0006_TherapyJeff_Boomerang.mp4",
-            "reel-cover": "/assets/story6/Story_0006_TherapyJeff_Cover.jpg",
-            "video": "/assets/story6/Story_0006_TherapyJeff.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 7,
-            "name": "LilyDoran",
-            "area": "Lifestyle",
-            "avatar": "/assets/story7/Story_0007_LilyDoran_Avatar.jpg",
-            "boomerang": "/assets/story7/Story_0007_LilyDoran_Boomerang.mp4",
-            "reel-cover": "/assets/story7/Story_0007_LilyDoran_Cover.jpg",
-            "video": "/assets/story7/Story_0007_LilyDoran.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 8,
-            "name": "Brit Palmer",
-            "area": "Fitness",
-            "avatar": "/assets/story8/Story_0008_Brit-Palmer_Avatar.jpg",
-            "boomerang": "/assets/story8/Story_0008_Brit-Palmer_Boomerang.mp4",
-            "reel-cover": "/assets/story8/Story_0008_Brit-Palmer_Cover.jpg",
-            "video": "/assets/story8/Story_0008_Brit-Palmer.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 9,
-            "name": "Money Ben",
-            "area": "Lifestyle",
-            "avatar": "/assets/story9/Story_0009_Money-Ben_Avatar.jpg",
-            "boomerang": "/assets/story9/Story_0009_Money-Ben_Boomerang.mp4",
-            "reel-cover": "/assets/story9/Story_0009_Money-Ben_Cover.jpg",
-            "video": "/assets/story9/Story_0009_Money-Ben.mp4",
-            "likes": 123,
-            "comments": 50
-        },
-        {
-            "id": 10,
-            "name": "LaynesLife",
-            "area": "Lifestyle",
-            "avatar": "/assets/story10/Story_00010_LaynesLife_Avatar.jpg",
-            "boomerang": "/assets/story10/Story_00010_LaynesLife_Boomerang.mp4",
-            "reel-cover": "/assets/story10/Story_00010_LaynesLife_Cover.jpg",
-            "video": "/assets/story10/Story_00010_LaynesLife.mp4",
-            "likes": 123,
-            "comments": 50
-        }
-    ]
+  "people": [
+    {
+      "id": 1,
+      "name": "Beccalways",
+      "area": "Lifestyle",
+      "avatar": "/assets/story1/Story_0001_Beccalways_Avatar.jpg",
+      "boomerang": "/assets/story1/Story_0001_Beccalways_Boomerang.mp4",
+      "reel-cover": "/assets/story1/Story_0001_Beccalways_Cover.jpg",
+      "video": "/assets/story1/Story_0001_Beccalways.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 2,
+      "name": "JanisTrue",
+      "area": "Beauty & Care",
+      "avatar": "/assets/story2/Story_0002_Janistrue_Avatar.jpg",
+      "boomerang": "/assets/story2/Story_0002_Janistrue_Boomerang.mp4",
+      "reel-cover": "/assets/story2/Story_0002_Janistrue_Cover.jpg",
+      "video": "/assets/story2/Story_0002_Janistrue.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 3,
+      "name": "Noel D",
+      "area": "Bodybuilding",
+      "avatar": "/assets/story3/Story_0003_Noel-Deyzel_Avatar.jpeg",
+      "boomerang": "/assets/story3/Story_0003_Noel-Deyzel_Boomerang.mp4",
+      "reel-cover": "/assets/story3/Story_0003_Noel-Deyzel_Cover.jpg",
+      "video": "/assets/story3/Story_0003_Noel-Deyzel.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 4,
+      "name": "Tatiana L",
+      "area": "Fitness",
+      "avatar": "/assets/story4/Story_0004_Tatiana-Lares_Avatar.jpg",
+      "boomerang": "/assets/story4/Story_0004_Tatiana-Lares_Boomerang.mp4",
+      "reel-cover": "/assets/story4/Story_0004_Tatiana-Lares_Cover.jpg",
+      "video": "/assets/story4/Story_0004_Tatiana-Lares.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 5,
+      "name": "Andy Fvng",
+      "area": "Healthy Eating",
+      "avatar": "/assets/story5/Story_0005_Andy-Fvng_Avatar.jpeg",
+      "boomerang": "/assets/story5/Story_0005_Andy-Fvng_Boomerang.mp4",
+      "reel-cover": "/assets/story5/Story_0005_Andy-Fvng_Cover.jpg",
+      "video": "/assets/story5/Story_0005_Andy-Fvng.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 6,
+      "name": "TherapyJeff",
+      "area": "Healthy Eating",
+      "avatar": "/assets/story6/Story_0006_TherapyJeff_Avatar.jpg",
+      "boomerang": "/assets/story6/Story_0006_TherapyJeff_Boomerang.mp4",
+      "reel-cover": "/assets/story6/Story_0006_TherapyJeff_Cover.jpg",
+      "video": "/assets/story6/Story_0006_TherapyJeff.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 7,
+      "name": "LilyDoran",
+      "area": "Lifestyle",
+      "avatar": "/assets/story7/Story_0007_LilyDoran_Avatar.jpg",
+      "boomerang": "/assets/story7/Story_0007_LilyDoran_Boomerang.mp4",
+      "reel-cover": "/assets/story7/Story_0007_LilyDoran_Cover.jpg",
+      "video": "/assets/story7/Story_0007_LilyDoran.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 8,
+      "name": "Brit Palmer",
+      "area": "Fitness",
+      "avatar": "/assets/story8/Story_0008_Brit-Palmer_Avatar.jpg",
+      "boomerang": "/assets/story8/Story_0008_Brit-Palmer_Boomerang.mp4",
+      "reel-cover": "/assets/story8/Story_0008_Brit-Palmer_Cover.jpg",
+      "video": "/assets/story8/Story_0008_Brit-Palmer.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 9,
+      "name": "Money Ben",
+      "area": "Lifestyle",
+      "avatar": "/assets/story9/Story_0009_Money-Ben_Avatar.jpg",
+      "boomerang": "/assets/story9/Story_0009_Money-Ben_Boomerang.mp4",
+      "reel-cover": "/assets/story9/Story_0009_Money-Ben_Cover.jpg",
+      "video": "/assets/story9/Story_0009_Money-Ben.mp4",
+      "likes": 123,
+      "comments": 50
+    },
+    {
+      "id": 10,
+      "name": "LaynesLife",
+      "area": "Lifestyle",
+      "avatar": "/assets/story10/Story_00010_LaynesLife_Avatar.jpg",
+      "boomerang": "/assets/story10/Story_00010_LaynesLife_Boomerang.mp4",
+      "reel-cover": "/assets/story10/Story_00010_LaynesLife_Cover.jpg",
+      "video": "/assets/story10/Story_00010_LaynesLife.mp4",
+      "likes": 123,
+      "comments": 50
+    }
+  ]
 }

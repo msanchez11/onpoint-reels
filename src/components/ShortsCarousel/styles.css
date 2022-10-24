@@ -1,0 +1,83 @@
+.shorts-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.shorts-header span {
+  font-weight: 700;
+  color: rgb(141, 140, 140);
+  margin: 10px;
+}
+.shorts-header .see-all {
+  font-weight: 700;
+  color: #51d0f7;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Video styles  !!! OJO CON LOS BREACKPOINTS !!! */
+.short-video-wrapper {
+  height: 420px;
+  width: 240px;
+  position: relative;
+}
+.boomerang-video {
+  height: 420px;
+  width: 240px;
+  border-radius: 20px;
+}
+/* Video styles  !!! OJO !!!!!!!!!!!!!!!!!*/
+
+.short-person-wrapper {
+  position: absolute;
+  bottom: 5%;
+  left: calc(50% - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.person-photo {
+  width: 6.75em;
+  height: 6.75em;
+  border: 0.25em solid #fff;
+  border-radius: 50%;
+  margin-bottom: 8px;
+}
+.person-name {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Swiper Css Modificators */
+.shorts-carrousel .swiper-button-disabled {
+  opacity: 0 !important;
+}
+.shorts-carrousel .swiper-wrapper {
+  margin-bottom: 30px;
+}
+.shorts-carrousel .swiper-button-next,
+.shorts-carrousel .swiper-button-prev {
+  color: black;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 255, 255);
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+.shorts-carrousel .swiper-button-next:after,
+.shorts-carrousel .swiper-button-prev:after {
+  font-size: 30px;
+}
+.shorts-carrousel .swiper-button-next {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Media Querys para modificar */
+@media only screen and (max-width: 820px) {
+  .shorts-carrousel .swiper-button-next,
+  .shorts-carrousel .swiper-button-prev {
+    display: none;
+  }
+}
