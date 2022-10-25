@@ -10,8 +10,7 @@ const MobileVideo = ({ url }) => {
         loop
         src={url}
         type="video/mp4"
-      ></video>
-      ;
+      />
     </>
   );
 };

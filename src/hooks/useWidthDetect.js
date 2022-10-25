@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 
 export default function useWidthDetect() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
     const currentWidth = window.screen.width;
     const minWidth = 800;
 
-    currentWidth >= minWidth ? setIsMobile(false) : setIsMobile(true);
+    currentWidth >= minWidth ? setIsDesktop(true) : setIsDesktop(false);
   }, []);
 
-  return { isMobile };
+  return { isDesktop };
 }

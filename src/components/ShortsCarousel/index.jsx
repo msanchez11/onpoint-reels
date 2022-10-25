@@ -12,7 +12,7 @@ import "./styles.css";
 
 const ShortsCarousel = (props) => {
   const { changeOpenValue } = props;
-  const { isMobile } = useWidthDetect();
+  const { isDesktop } = useWidthDetect();
 
   const triggerLogin = () => {
     window.alert("⚠️INCENTIVO DE LOGIN ABIERTO⚠️");
@@ -35,10 +35,10 @@ const ShortsCarousel = (props) => {
         {data.people.map((item) => (
           <SwiperSlide key={item.id} onClick={changeOpenValue}>
             <div className="short-video-wrapper">
-              {isMobile ? (
-                <MobileVideo url={item.boomerang} />
-              ) : (
+              {isDesktop ? (
                 <DesktopVideo url={item.boomerang} />
+              ) : (
+                <MobileVideo url={item.boomerang} />
               )}
               <div className="short-person-wrapper">
                 <img

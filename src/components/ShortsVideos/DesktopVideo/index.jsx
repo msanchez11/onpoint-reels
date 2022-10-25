@@ -14,8 +14,7 @@ const DesktopVideo = ({ url }) => {
         loop
         src={url}
         type="video/mp4"
-      ></video>
-      ;
+      />
     </>
   );
 };
