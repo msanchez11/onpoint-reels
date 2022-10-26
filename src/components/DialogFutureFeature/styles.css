@@ -15,12 +15,65 @@
   background-image: linear-gradient(to bottom right, #5900cd, #3f0065);
   padding: 30px;
   border-radius: 30px;
+  position: relative;
+}
+#dialog-coming-soon > .coming-soon > img {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
 }
 #dialog-coming-soon > .coming-soon > h2 {
   font-size: 32px;
   margin-bottom: 30px;
+  text-align: center;
 }
 #dialog-coming-soon > .coming-soon > p {
   font-size: 20px;
   text-align: center;
 }
+
+@media only screen and (max-width: 820px) {
+}
+
+@media only screen and (max-width: 450px) {
+  #dialog-coming-soon {
+    padding: 0 !important;
+  }
+  #dialog-coming-soon .close-container,
+  .last-div {
+    display: none;
+  }
+  #dialog-coming-soon .coming-soon {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+  #dialog-coming-soon > .coming-soon > img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+/* Descomentar para ver como queda el MODO MOBILE en DESKTOP */
+/* #dialog-coming-soon {
+  padding: 0 !important;
+}
+#dialog-coming-soon .close-container,
+.last-div {
+  display: none;
+}
+#dialog-coming-soon .coming-soon {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+#dialog-coming-soon > .coming-soon > img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+} */

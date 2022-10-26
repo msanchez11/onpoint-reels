@@ -19,10 +19,11 @@ const DialogFutureFeature = (props) => {
         <img src={closeIcon} alt="X" onClick={toggleOpenDialog} />
       </div>
       <div className="coming-soon">
-        <h2>Coming soon</h2>
+        <img src={closeIcon} alt="X" onClick={toggleOpenDialog} />
+        <h2>Coming soon!</h2>
         <p>We are working on a new way to discover and experience content. </p>
       </div>
-      <div></div>
+      <div className="last-div"></div>
     </ReactModal>
   );
 };
