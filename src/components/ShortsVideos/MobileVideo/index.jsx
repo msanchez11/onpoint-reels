@@ -7,6 +7,7 @@ const MobileVideo = ({ url }) => {
         className="boomerang-video"
         autoPlay
         muted
+        playsInline
         loop
         src={url}
         type="video/mp4"

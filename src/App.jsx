@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import ReelsModal from "./components/ReelsModal";
+import ModalLogin from "./components/ModalLogin";
 import StoriesCarousel from "./components/StoriesCarousel";
 import ShortsCarousel from "./components/ShortsCarousel";
 
@@ -14,7 +14,7 @@ function App() {
     <div id="stories-app" className="stories-body">
       <StoriesCarousel changeOpenValue={toggleOpen} />
       <ShortsCarousel changeOpenValue={toggleOpen} />
-      <ReelsModal isOpen={openReels} changeOpenValue={toggleOpen} />
+      <ModalLogin isOpen={openReels} changeOpenValue={toggleOpen} />
     </div>
   );
 }
