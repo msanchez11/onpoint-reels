@@ -5,11 +5,12 @@
   align-items: center;
   width: 400px;
   min-width: 351px;
+  height: 100%;
 }
 /* title */
 .incentive-wrapper h2 {
   color: white;
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 700;
 }
 /* botones */
@@ -30,6 +31,14 @@
   width: 350px;
   margin: 10px;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btns-container > button > img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 .btns-container .sign-in-separator {
   display: flex;

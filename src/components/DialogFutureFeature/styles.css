@@ -1,0 +1,26 @@
+#dialog-coming-soon {
+  height: 100%;
+  background-color: rgba(28, 1, 65, 0.658);
+}
+
+#dialog-coming-soon .coming-soon {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background-color: #5900cd;
+  background-image: linear-gradient(to bottom right, #5900cd, #3f0065);
+  padding: 30px;
+  border-radius: 30px;
+}
+#dialog-coming-soon > .coming-soon > h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+#dialog-coming-soon > .coming-soon > p {
+  font-size: 20px;
+  text-align: center;
+}
