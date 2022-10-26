@@ -1,15 +1,19 @@
-import { Navigation, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Scrollbar } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import data from "../../db/database.json";
 import breakpointConfig from "../../configs/shortsSwiperConfig.json";
+import DesktopVideo from "../ShortsVideos/DesktopVideo";
+import MobileVideo from "../ShortsVideos/MobileVideo";
+import useWidthDetect from "../../hooks/useWidthDetect";
 import "./styles.css";
 
 const ShortsCarousel = (props) => {
   const { changeOpenValue } = props;
+  const { isDesktop } = useWidthDetect();
+
   const triggerLogin = () => {
     window.alert("⚠️INCENTIVO DE LOGIN ABIERTO⚠️");
   };
@@ -26,20 +30,16 @@ const ShortsCarousel = (props) => {
         className="shorts-carrousel"
         modules={[Navigation, Scrollbar]}
         breakpoints={breakpointConfig}
-        breakpointsBase={"window"}
         navigation
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id} onClick={changeOpenValue}>
             <div className="short-video-wrapper">
-              <video
-                className="boomerang-video"
-                autoPlay
-                muted
-                loop
-                src={item.boomerang}
-                type="video/mp4"
-              ></video>
+              {isDesktop ? (
+                <DesktopVideo url={item.boomerang} />
+              ) : (
+                <MobileVideo url={item.boomerang} />
+              )}
               <div className="short-person-wrapper">
                 <img
                   className="person-photo"

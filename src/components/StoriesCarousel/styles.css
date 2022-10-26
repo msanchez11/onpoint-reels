@@ -90,3 +90,10 @@
     margin-bottom: 0;
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .stories-header span,
+  .stories-person-area {
+    font-size: 14px;
+  }
+}

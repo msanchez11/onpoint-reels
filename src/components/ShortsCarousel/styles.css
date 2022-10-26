@@ -25,6 +25,7 @@
   height: 420px;
   width: 240px;
   border-radius: 20px;
+  cursor: pointer;
 }
 /* Video styles  !!! OJO !!!!!!!!!!!!!!!!!*/
 
@@ -79,5 +80,11 @@
   .shorts-carrousel .swiper-button-next,
   .shorts-carrousel .swiper-button-prev {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .shorts-header span {
+    font-size: 14px;
   }
 }
