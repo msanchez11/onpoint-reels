@@ -14,15 +14,11 @@ const ShortsCarousel = (props) => {
   const { changeOpenValue } = props;
   const { isDesktop } = useWidthDetect();
 
-  const triggerLogin = () => {
-    window.alert("⚠️INCENTIVO DE LOGIN ABIERTO⚠️");
-  };
-
   return (
     <div className="shorts-main-wrapper">
       <div className="shorts-header">
         <span>SUGGESTED CREATORS FOR YOU</span>
-        <span className="see-all" onClick={triggerLogin}>
+        <span className="see-all" onClick={changeOpenValue}>
           SEE ALL
         </span>
       </div>

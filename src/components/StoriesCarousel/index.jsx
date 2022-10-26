@@ -11,15 +11,12 @@ import "./styles.css";
 
 const StoriesCarousel = (props) => {
   const { changeOpenValue } = props;
-  const triggerLogin = () => {
-    window.alert("⚠️INCENTIVO DE LOGIN ABIERTO⚠️");
-  };
 
   return (
     <div className="all-stories-wrapper">
       <div className="stories-header">
         <span>CREATORS BUZZ</span>
-        <span className="see-all" onClick={triggerLogin}>
+        <span className="see-all" onClick={changeOpenValue}>
           SEE ALL
         </span>
       </div>
