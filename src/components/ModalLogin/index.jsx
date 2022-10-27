@@ -5,7 +5,7 @@ import LoginIncentive from "./LoginIncentive";
 import "./styles.css";
 
 const ModalLogin = (props) => {
-  const { isOpen, changeOpenValue } = props;
+  const { isOpen, changeOpenLogin } = props;
   return (
     <ReactModal
       style={stylesCfg}
@@ -17,7 +17,7 @@ const ModalLogin = (props) => {
       ariaHideApp={false}
     >
       <div className="close-container">
-        <img src={closeIcon} alt="X" onClick={changeOpenValue} />
+        <img src={closeIcon} alt="X" onClick={changeOpenLogin} />
       </div>
       <LoginIncentive />
     </ReactModal>

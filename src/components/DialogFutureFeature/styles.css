@@ -2,6 +2,19 @@
   height: 100%;
   background-color: rgba(28, 1, 65, 0.658);
 }
+#dialog-coming-soon .close-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#dialog-coming-soon .close-container img {
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  /* display: none; DESCOMENTAR ESTA LINEA PARA OCULTAR X EN MODAL COMING SOON ARRIBA IZQUIERDA */
+}
 
 #dialog-coming-soon .coming-soon {
   color: white;
