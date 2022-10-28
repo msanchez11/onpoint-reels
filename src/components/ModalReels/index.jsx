@@ -15,6 +15,8 @@ const ModalReels = (props) => {
       className={"reels-modal-content"}
       parentSelector={() => document.querySelector("#stories-app")}
       ariaHideApp={false}
+      shouldReturnFocusAfterClose={false}
+      onRequestClose={changeOpenReels}
     >
       <div className="close-container">
         <img src={closeIcon} alt="X" onClick={changeOpenReels} />

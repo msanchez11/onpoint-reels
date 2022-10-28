@@ -15,6 +15,7 @@ const ModalLogin = (props) => {
       className={"login-modal-content"}
       parentSelector={() => document.querySelector("#stories-app")}
       ariaHideApp={false}
+      onRequestClose={changeOpenLogin}
     >
       <div className="close-container">
         <img src={closeIcon} alt="X" onClick={changeOpenLogin} />

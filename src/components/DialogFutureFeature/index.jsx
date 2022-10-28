@@ -14,6 +14,7 @@ const DialogFutureFeature = (props) => {
       className={"dialog-cooming-soon-content"}
       parentSelector={() => document.querySelector("#stories-app")}
       ariaHideApp={false}
+      onRequestClose={toggleOpenDialog}
     >
       <div className="close-container">
         <img src={closeIcon} alt="X" onClick={toggleOpenDialog} />
