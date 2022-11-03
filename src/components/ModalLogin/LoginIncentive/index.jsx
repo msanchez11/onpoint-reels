@@ -1,23 +1,19 @@
-import { useState } from "react";
 import logoFace from "../../../assets/facebook-logo.png";
 import logoGoogle from "../../../assets/google-logo.png";
-import DialogFutureFeature from "../../DialogFutureFeature";
 import "./styles.css";
 
-const LoginIncentive = () => {
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const toggleDialogValue = () => setIsDialogOpen(!isDialogOpen);
-
+const LoginIncentive = (props) => {
+  const { toggleComingSoon } = props;
   return (
     <div className="incentive-wrapper">
       <h2>Continue watching?</h2>
 
       <div className="btns-container">
-        <button className="sign-in-google" onClick={toggleDialogValue}>
+        <button className="sign-in-google" onClick={toggleComingSoon}>
           <img src={logoGoogle} alt="Google" />
           Sign in with Google
         </button>
-        <button className="sign-in-facebook" onClick={toggleDialogValue}>
+        <button className="sign-in-facebook" onClick={toggleComingSoon}>
           <img src={logoFace} alt="Facebook" />
           Sign in with Facebook
         </button>
@@ -26,19 +22,15 @@ const LoginIncentive = () => {
           <span>or</span>
           <div className="separator-line"></div>
         </div>
-        <button className="log-in" onClick={toggleDialogValue}>
+        <button className="log-in" onClick={toggleComingSoon}>
           Log in
         </button>
       </div>
 
       <div className="sign-container">
         <p>Don't have an account?</p>
-        <span onClick={toggleDialogValue}>Sign up</span>
+        <span onClick={toggleComingSoon}>Sign up</span>
       </div>
-      <DialogFutureFeature
-        openDialog={isDialogOpen}
-        toggleOpenDialog={toggleDialogValue}
-      />
     </div>
   );
 };

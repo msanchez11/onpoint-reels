@@ -1,7 +1,9 @@
 #modal-reels .carousel-container {
   display: initial;
 }
-
+#modal-reels .reels-header {
+  display: none;
+}
 #modal-reels .close-container {
   width: 100%;
   display: flex;

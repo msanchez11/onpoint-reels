@@ -25,7 +25,6 @@ const ReelsCarousel = (props) => {
         breakpoints={breakpointConfig}
         navigation
         centeredSlides={true}
-        initialSlide={1}
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id} onClick={changeOpenReels}>

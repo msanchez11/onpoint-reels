@@ -32,7 +32,7 @@ const ShortsCarousel = (props) => {
           <SwiperSlide key={item.id} onClick={changeOpenReels}>
             <div className="short-video-wrapper">
               {isDesktop ? (
-                <DesktopVideo url={item.boomerang} />
+                <DesktopVideo url={item.boomerang} cover={item.reelCover} />
               ) : (
                 <MobileVideo url={item.boomerang} />
               )}

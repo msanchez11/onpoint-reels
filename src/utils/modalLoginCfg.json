@@ -5,7 +5,8 @@
     "left": 0,
     "right": 0,
     "bottom": 0,
-    "backgroundColor": "rgba(43, 43, 43, 0.95)",
+    "backgroundColor": "#5900cd",
+    "backgroundImage": "linear-gradient(to bottom, #5900cd, #3f0065)",
     "zIndex": 999999
   },
   "content": {
@@ -14,12 +15,12 @@
     "right": "0",
     "bottom": "0",
     "overflow": "hidden",
-    "padding": "20px",
+    "padding": "20px 30px",
     "width": "100%",
     "height": "100%",
     "display": "flex",
     "flexDirection": "column",
-    "justifyContent": "flex-start",
+    "justifyContent": "space-between",
     "alignItems": "center"
   }
 }

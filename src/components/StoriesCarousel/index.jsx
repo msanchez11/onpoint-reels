@@ -1,10 +1,9 @@
 // import Swiper core and required modules
-import { Navigation, Scrollbar } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import data from "../../db/database.json";
 import breakpointConfig from "../../configs/storiesSwiperConfig.json";
 import "./styles.css";
@@ -22,10 +21,9 @@ const StoriesCarousel = (props) => {
       </div>
       <Swiper
         className="stories-carrousel"
-        modules={[Navigation, Scrollbar]}
+        modules={[Navigation]}
         breakpoints={breakpointConfig}
         navigation
-        scrollbar={{ draggable: true }}
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id}>
