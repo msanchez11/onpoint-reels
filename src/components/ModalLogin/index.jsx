@@ -22,7 +22,6 @@ const ModalLogin = (props) => {
       className={"login-modal-content"}
       parentSelector={() => document.querySelector("#stories-app")}
       ariaHideApp={false}
-      onRequestClose={changeOpenValue}
     >
       <div className="close-container">
         <img src={velongLogo} alt="VelongLogo" className="velong-logo" />
