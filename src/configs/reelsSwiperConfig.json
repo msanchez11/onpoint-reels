@@ -1,0 +1,16 @@
+{
+  "1600": {
+    "slidesPerView": 5,
+    "spaceBetween": 300
+  },
+  "900": {
+    "slidesPerView": 3.5
+  },
+  "500": {
+    "slidesPerView": 1.8
+  },
+  "50": {
+    "slidesPerView": 1,
+    "spaceBetween": 0
+  }
+}

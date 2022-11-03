@@ -4,39 +4,33 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import data from "../../db/database.json";
-import breakpointConfig from "../../configs/shortsSwiperConfig.json";
-import DesktopVideo from "../ShortsVideos/DesktopVideo";
+import breakpointConfig from "../../configs/reelsSwiperConfig.json";
 import MobileVideo from "../ShortsVideos/MobileVideo";
-import useWidthDetect from "../../hooks/useWidthDetect";
 import "./styles.css";
 
-const ShortsCarousel = (props) => {
+const ReelsCarousel = (props) => {
   const { changeOpenReels, changeOpenLogin } = props;
-  const { isDesktop } = useWidthDetect();
 
   return (
-    <div className="shorts-main-wrapper">
-      <div className="shorts-header">
+    <div className="reels-main-wrapper">
+      <div className="reels-header">
         <span>SUGGESTED CREATORS FOR YOU</span>
         <span className="see-all" onClick={changeOpenLogin}>
           SEE ALL
         </span>
       </div>
       <Swiper
-        className="shorts-carrousel"
+        className="reels-carrousel"
         modules={[Navigation, Scrollbar]}
         breakpoints={breakpointConfig}
         navigation
+        centeredSlides={true}
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id} onClick={changeOpenReels}>
-            <div className="short-video-wrapper">
-              {isDesktop ? (
-                <DesktopVideo url={item.boomerang} cover={item.reelCover} />
-              ) : (
-                <MobileVideo url={item.boomerang} />
-              )}
-              <div className="short-person-wrapper">
+            <div className="reels-video-wrapper">
+              <MobileVideo url={item.video} />
+              <div className="reels-person-wrapper">
                 <img
                   className="person-photo"
                   src={item.avatar}
@@ -52,4 +46,4 @@ const ShortsCarousel = (props) => {
   );
 };
 
-export default ShortsCarousel;
+export default ReelsCarousel;
