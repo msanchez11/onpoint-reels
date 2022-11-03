@@ -1,6 +1,6 @@
 import React from "react";
 
-const DesktopVideo = ({ url }) => {
+const DesktopVideo = ({ url, cover }) => {
   const playVideo = (e) => e.target.play();
   const stopVideo = (e) => e.target.pause();
 
@@ -12,6 +12,7 @@ const DesktopVideo = ({ url }) => {
         onMouseOut={stopVideo}
         muted
         loop
+        poster={cover}
         src={url}
         type="video/mp4"
       />

@@ -1,0 +1,23 @@
+#modal-reels .carousel-container {
+  display: initial;
+}
+#modal-reels .reels-header {
+  display: none;
+}
+#modal-reels .close-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+#modal-reels .close-container img {
+  filter: brightness(0) invert(1);
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+}
+
+#modal-reels .last-div {
+  height: 35px;
+  width: 35px;
+}
