@@ -69,7 +69,8 @@
 .stories-carrousel .swiper-button-prev:after {
   font-size: 10px;
 }
-.stories-carrousel .swiper-button-next {
+.stories-carrousel .swiper-button-next,
+.stories-carrousel .swiper-button-prev {
   background-color: rgba(255, 255, 255, 0.8);
 }
 

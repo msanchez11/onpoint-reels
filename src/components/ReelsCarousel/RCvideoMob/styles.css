@@ -1,0 +1,10 @@
+.modal-reels-video {
+  height: 110%;
+  width: 100%;
+}
+@media only screen and (max-width: 374px) {
+  .modal-reels-video {
+    height: 130%;
+    width: 120%;
+  }
+}

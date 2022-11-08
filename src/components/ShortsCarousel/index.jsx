@@ -5,8 +5,8 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import data from "../../db/database.json";
 import breakpointConfig from "../../configs/shortsSwiperConfig.json";
-import DesktopVideo from "../ShortsVideos/DesktopVideo";
-import MobileVideo from "../ShortsVideos/MobileVideo";
+import DesktopVideo from "./DesktopVideo";
+import MobileVideo from "./MobileVideo";
 import useWidthDetect from "../../hooks/useWidthDetect";
 import "./styles.css";
 
@@ -32,7 +32,7 @@ const ShortsCarousel = (props) => {
           <SwiperSlide key={item.id} onClick={changeOpenReels}>
             <div className="short-video-wrapper">
               {isDesktop ? (
-                <DesktopVideo url={item.boomerang} cover={item.reelCover} />
+                <DesktopVideo url={item.boomerang} />
               ) : (
                 <MobileVideo url={item.boomerang} />
               )}

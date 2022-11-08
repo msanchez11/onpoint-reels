@@ -21,3 +21,16 @@
   height: 35px;
   width: 35px;
 }
+
+@media only screen and (max-width: 475px) {
+  #modal-reels {
+    padding: 0 !important;
+  }
+
+  #modal-reels .close-container img {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 9;
+  }
+}
