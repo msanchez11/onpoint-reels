@@ -56,15 +56,32 @@
 /* SLIDE ACTIVE */
 
 #modal-reels .swiper-slide-active .video-time-line {
-  display: initial;
+  display: inherit;
+  position: absolute;
+
+  background-color: #fff;
   width: 90%;
   height: 4px;
   border-radius: 10px;
-  background-color: rgb(179, 179, 179);
-  position: absolute;
   z-index: 9;
   top: 2%;
   left: 5%;
+  overflow: hidden;
+}
+#modal-reels .swiper-slide-active .video-time-line::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(179, 179, 179);
+  width: 100%;
+  height: 100%;
+  transform: translateX(0%);
+  animation: fill-time-bar 15s ease-in-out forwards;
+}
+
+@keyframes fill-time-bar {
+  to {
+    transform: translateX(100%);
+  }
 }
 
 #modal-reels .swiper-slide-active .reels-header-wrapper {
