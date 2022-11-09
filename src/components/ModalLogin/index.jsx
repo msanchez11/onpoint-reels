@@ -12,6 +12,10 @@ const ModalLogin = (props) => {
   const { isOpen, changeOpenLogin } = props;
   const [showComingSoon, setShowComingSoon] = useState(false);
   const toggleComingSoon = () => setShowComingSoon(true);
+  const onClose = () => {
+    setShowComingSoon(false);
+    changeOpenLogin();
+  };
 
   return (
     <ReactModal
@@ -25,12 +29,7 @@ const ModalLogin = (props) => {
     >
       <div className="close-container">
         <img src={velongLogo} alt="VelongLogo" className="velong-logo" />
-        <img
-          src={closeIcon}
-          alt="X"
-          className="x-logo"
-          onClick={changeOpenLogin}
-        />
+        <img src={closeIcon} alt="X" className="x-logo" onClick={onClose} />
       </div>
 
       {!showComingSoon ? (

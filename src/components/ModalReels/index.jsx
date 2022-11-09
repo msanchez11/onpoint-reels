@@ -5,7 +5,7 @@ import ReelsCarousel from "../ReelsCarousel";
 import "./styles.css";
 
 const ModalReels = (props) => {
-  const { isOpen, changeOpenReels, changeOpenLogin } = props;
+  const { isOpen, changeOpenReels, changeOpenLogin, openInSlideX } = props;
   return (
     <ReactModal
       style={stylesCfg}
@@ -15,14 +15,16 @@ const ModalReels = (props) => {
       className={"reels-modal-content"}
       parentSelector={() => document.querySelector("#stories-app")}
       ariaHideApp={false}
-      shouldReturnFocusAfterClose={false}
       onRequestClose={changeOpenReels}
     >
       <div className="close-container">
         <img src={closeIcon} alt="X" onClick={changeOpenReels} />
       </div>
       <div className="carousel-container">
-        <ReelsCarousel changeOpenLogin={changeOpenLogin} />
+        <ReelsCarousel
+          changeOpenLogin={changeOpenLogin}
+          openInSlideX={openInSlideX}
+        />
       </div>
     </ReactModal>
   );

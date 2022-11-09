@@ -1,18 +1,21 @@
 .all-stories-wrapper {
   display: block;
+  margin: 20px 0;
 }
 .stories-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
 .stories-header span {
-  font-weight: 700;
   color: rgb(141, 140, 140);
-  margin: 10px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  text-align: center;
 }
 .stories-header .see-all {
-  font-weight: 700;
   color: #51d0f7;
   text-decoration: none;
   cursor: pointer;
@@ -31,21 +34,23 @@
   padding: 0.625em 0;
 }
 .stories-person-photo {
-  width: 6.75em;
-  height: 6.75em;
-  padding: 0.125em;
-  border: 0.125em solid #21daf3;
+  width: 87px;
+  height: 87px;
+  padding: 3px;
+  border: 2px solid #21daf3;
   border-radius: 50%;
-  margin-bottom: 8px;
 }
 .stories-person-photo:hover {
   transform: scale(1.1);
 }
 .stories-person-name {
-  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
 }
 .stories-person-area {
   font-weight: 300;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -62,14 +67,15 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
   background-color: white;
   border-radius: 100%;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 }
 .stories-carrousel .swiper-button-next:after,
 .stories-carrousel .swiper-button-prev:after {
   font-size: 10px;
 }
-.stories-carrousel .swiper-button-next {
+.stories-carrousel .swiper-button-next,
+.stories-carrousel .swiper-button-prev {
   background-color: rgba(255, 255, 255, 0.8);
 }
 
@@ -89,8 +95,23 @@
 }
 
 @media only screen and (max-width: 450px) {
-  .stories-header span,
+  .stories-header span {
+    color: rgb(141, 140, 140);
+    margin: 10px;
+    font-size: 13px;
+    line-height: 15.2px;
+    font-weight: 700;
+  }
+  .stories-person-photo {
+    width: 57px;
+    height: 57px;
+    padding: 2px;
+    border: 1px solid #21daf3;
+  }
+  .stories-person-name {
+    font-size: 12px;
+  }
   .stories-person-area {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
