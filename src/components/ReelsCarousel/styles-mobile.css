@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1920px) {
+  #modal-reels .swiper-slide-active {
+    width: 480px !important;
+    position: relative;
+  }
+  #modal-reels .reels-carrousel .swiper-button-next {
+    right: 29% !important;
+  }
+  #modal-reels .reels-carrousel .swiper-button-prev {
+    left: 38.5% !important;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  #modal-reels .swiper-slide-active {
+    width: 380px !important;
+    position: relative;
+  }
+  #modal-reels .reels-carrousel .swiper-button-next {
+    right: 27.2% !important;
+  }
+  #modal-reels .reels-carrousel .swiper-button-prev {
+    left: 39.8% !important;
+  }
+}
+@media only screen and (max-width: 1180px) {
+  #modal-reels .reels-carrousel .swiper-button-next {
+    right: 20% !important;
+  }
+  #modal-reels .reels-carrousel .swiper-button-prev {
+    left: 34% !important;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  #modal-reels .close-container {
+    margin-bottom: 18%;
+  }
+  .reels-carrousel .swiper-button-next,
+  .reels-carrousel .swiper-button-prev {
+    display: none;
+  }
+  #modal-reels .swiper-slide-active {
+    width: 450px !important;
+    position: relative;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #modal-reels .close-container {
+    margin-bottom: 8%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #modal-reels .close-container {
+    margin: 0;
+  }
+  #modal-reels .swiper-slide-active {
+    width: auto !important;
+    position: relative;
+  }
+  .reels-video-wrapper {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+  }
+  .reels-person-wrapper {
+    position: absolute;
+    bottom: inherit;
+    top: 5%;
+    left: 5%;
+    z-index: 9;
+    display: flex;
+    flex-direction: row;
+  }
+  .reels-person-wrapper > .person-photo {
+    width: 35px;
+    height: 35px;
+    border: 0.1em solid #fff;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+  }
+  .reels-video-data {
+    position: absolute;
+    bottom: 12% !important;
+    right: 5%;
+    z-index: 9;
+  }
+  .velongLogo {
+    display: block !important;
+    position: absolute;
+    bottom: 15%;
+    left: 5%;
+    z-index: 9;
+    width: 29px;
+    height: 35px;
+  }
+}

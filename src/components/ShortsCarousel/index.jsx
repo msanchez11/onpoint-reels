@@ -5,14 +5,19 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import data from "../../db/database.json";
 import breakpointConfig from "../../configs/shortsSwiperConfig.json";
-import DesktopVideo from "../ShortsVideos/DesktopVideo";
-import MobileVideo from "../ShortsVideos/MobileVideo";
+import DesktopVideo from "./DesktopVideo";
+import MobileVideo from "./MobileVideo";
 import useWidthDetect from "../../hooks/useWidthDetect";
 import "./styles.css";
 
 const ShortsCarousel = (props) => {
-  const { changeOpenReels, changeOpenLogin } = props;
+  const { changeOpenReels, changeOpenLogin, setGoToSlide } = props;
   const { isDesktop } = useWidthDetect();
+  const openModalInCorrectSlide = (id) => {
+    setGoToSlide(id - 1);
+    console.log(id - 1);
+    changeOpenReels();
+  };
 
   return (
     <div className="shorts-main-wrapper">
@@ -29,10 +34,13 @@ const ShortsCarousel = (props) => {
         navigation
       >
         {data.people.map((item) => (
-          <SwiperSlide key={item.id} onClick={changeOpenReels}>
+          <SwiperSlide
+            key={item.id}
+            onClick={() => openModalInCorrectSlide(item.id)}
+          >
             <div className="short-video-wrapper">
               {isDesktop ? (
-                <DesktopVideo url={item.boomerang} cover={item.reelCover} />
+                <DesktopVideo url={item.boomerang} />
               ) : (
                 <MobileVideo url={item.boomerang} />
               )}

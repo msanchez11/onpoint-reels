@@ -5,7 +5,7 @@ export default function useWidthDetect() {
 
   useEffect(() => {
     const currentWidth = window.screen.width;
-    const minWidth = 821;
+    const minWidth = 820;
 
     currentWidth >= minWidth ? setIsDesktop(true) : setIsDesktop(false);
   }, []);
