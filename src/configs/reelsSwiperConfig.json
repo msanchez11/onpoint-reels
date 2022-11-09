@@ -1,9 +1,26 @@
 {
-  "500": {
+  "1920": {
+    "slidesPerView": 5,
+    "spaceBetween": 100
+  },
+  "1600": {
+    "slidesPerView": 6,
+    "spaceBetween": 100
+  },
+  "1180": {
     "slidesPerView": 4,
     "spaceBetween": 100
   },
+  "820": {
+    "slidesPerView": 3,
+    "spaceBetween": 40
+  },
+  "768": {
+    "slidesPerView": 2,
+    "spaceBetween": 30
+  },
   "50": {
-    "slidesPerView": 1
+    "slidesPerView": 1,
+    "spaceBetween": 0
   }
 }

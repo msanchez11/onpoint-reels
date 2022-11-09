@@ -35,14 +35,14 @@ const RCvideoDesk = ({ url, id }) => {
           src={Mute}
           alt="UnmuteVideo"
           onClick={toggleMute}
-          className="mute-unmute-icon"
+          className="mute-unmute-icon-desk"
         />
       ) : (
         <img
           src={Unmute}
           alt="MuteVideo"
           onClick={toggleMute}
-          className="mute-unmute-icon"
+          className="mute-unmute-icon-desk"
         />
       )}
       <video

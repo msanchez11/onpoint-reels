@@ -14,6 +14,7 @@ import Share from "../../assets/share.svg";
 import VelongLogo from "../../assets/velong_logo.svg";
 import useWidthDetect from "../../hooks/useWidthDetect";
 import "./styles.css";
+import "./styles-mobile.css";
 
 const ReelsCarousel = (props) => {
   const { isDesktop } = useWidthDetect();
@@ -33,7 +34,7 @@ const ReelsCarousel = (props) => {
           <SwiperSlide key={item.id} id={`slide-number-${item.id}`}>
             <div className="video-time-line"></div>
             <div className="reels-header-wrapper">
-              <div className="reels-person-wrapper">
+              <div className="reels-person-wrapper" onClick={changeOpenLogin}>
                 <img className="person-photo" src={item.avatar} alt="Avatar" />
                 <span className="person-name">{item.name}</span>
               </div>
@@ -59,7 +60,7 @@ const ReelsCarousel = (props) => {
                 Share
               </div>
             </div>
-            <div className="reels-videos-velong">
+            <div className="reels-video-velong">
               <img src={VelongLogo} alt="VelongLogo" className="velongLogo" />
             </div>
           </SwiperSlide>
