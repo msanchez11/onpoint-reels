@@ -9,7 +9,12 @@ import breakpointConfig from "../../configs/storiesSwiperConfig.json";
 import "./styles.css";
 
 const StoriesCarousel = (props) => {
-  const { changeOpenLogin, changeOpenReels } = props;
+  const { changeOpenLogin, changeOpenReels, setGoToSlide } = props;
+  const openModalInCorrectSlide = (id) => {
+    setGoToSlide(id - 1);
+    console.log(id - 1);
+    changeOpenReels();
+  };
 
   return (
     <div className="all-stories-wrapper">
@@ -27,7 +32,10 @@ const StoriesCarousel = (props) => {
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id}>
-            <div className="stories-person-wrapper" onClick={changeOpenReels}>
+            <div
+              className="stories-person-wrapper"
+              onClick={() => openModalInCorrectSlide(item.id)}
+            >
               <div className="stories-photo-container">
                 <img
                   className="stories-person-photo"

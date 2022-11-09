@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
@@ -8,16 +8,16 @@ import data from "../../db/database.json";
 import breakpointConfig from "../../configs/reelsSwiperConfig.json";
 import RCvideoDesk from "./RCvideoDesk";
 import RCvideoMob from "./RCvideoMob";
-import Mute from "../../assets/muted.png";
-import Unmute from "../../assets/unmuted.svg";
+import Likes from "../../assets/likes.svg";
+import Comments from "../../assets/comment.svg";
+import Share from "../../assets/share.svg";
+import VelongLogo from "../../assets/velong_logo.svg";
 import useWidthDetect from "../../hooks/useWidthDetect";
 import "./styles.css";
 
 const ReelsCarousel = (props) => {
   const { isDesktop } = useWidthDetect();
-  const { changeOpenLogin } = props;
-  const [isMuted, setIsMuted] = useState(true);
-  const toggleMute = () => setIsMuted(!isMuted);
+  const { changeOpenLogin, openInSlideX } = props;
 
   return (
     <div className="reels-main-wrapper">
@@ -27,51 +27,40 @@ const ReelsCarousel = (props) => {
         breakpoints={breakpointConfig}
         navigation
         centeredSlides={true}
+        initialSlide={openInSlideX}
       >
         {data.people.map((item) => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item.id} id={`slide-number-${item.id}`}>
             <div className="video-time-line"></div>
             <div className="reels-header-wrapper">
               <div className="reels-person-wrapper">
                 <img className="person-photo" src={item.avatar} alt="Avatar" />
                 <span className="person-name">{item.name}</span>
               </div>
-              {isMuted ? (
-                <img
-                  src={Unmute}
-                  alt="UnmuteVideo"
-                  onClick={toggleMute}
-                  className="mute-unmute-icon"
-                />
-              ) : (
-                <img
-                  src={Mute}
-                  alt="MuteVideo"
-                  onClick={toggleMute}
-                  className="mute-unmute-icon"
-                />
-              )}
             </div>
             <div className="reels-video-wrapper">
               {isDesktop ? (
-                <RCvideoDesk url={item.video} />
+                <RCvideoDesk url={item.video} id={item.id} />
               ) : (
-                <RCvideoMob url={item.video} isMuted={isMuted} />
+                <RCvideoMob url={item.video} id={item.id} />
               )}
             </div>
             <div className="reels-video-data" onClick={changeOpenLogin}>
               <div className="data-likes">
-                <img src="" alt="Likes" />
+                <img src={Likes} alt="Likes" />
                 {item.likes}
               </div>
               <div className="data-comments" onClick={changeOpenLogin}>
-                <img src="" alt="Comments" />
+                <img src={Comments} alt="Comments" />
                 {item.comments}
               </div>
               <div className="data-share" onClick={changeOpenLogin}>
-                <img src="" alt="Share" />
+                <img src={Share} alt="Share" />
                 Share
               </div>
+            </div>
+            <div className="reels-videos-velong">
+              <img src={VelongLogo} alt="VelongLogo" className="velongLogo" />
             </div>
           </SwiperSlide>
         ))}
