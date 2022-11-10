@@ -15,10 +15,30 @@ import VelongLogo from "../../assets/velong_logo.svg";
 import useWidthDetect from "../../hooks/useWidthDetect";
 import "./styles.css";
 import "./styles-mobile.css";
+import { useState } from "react";
 
 const ReelsCarousel = (props) => {
   const { isDesktop } = useWidthDetect();
   const { changeOpenLogin, openInSlideX } = props;
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const togglePlayingVideo = (duration, videoNumber) => {
+    setIsPlaying(!isPlaying);
+    console.log("Duration: ", duration);
+    console.log("videoNumber: ", videoNumber);
+    if (isPlaying) {
+      document
+        .querySelector(":root")
+        .style.setProperty("--duration", `${duration}s`);
+      document
+        .getElementById(`progress-video-${videoNumber}`)
+        .classList.add("progress");
+    } else {
+      document
+        .getElementById(`progress-video-${videoNumber}`)
+        .classList.remove("progress");
+    }
+  };
 
   return (
     <div className="reels-main-wrapper">
@@ -32,7 +52,9 @@ const ReelsCarousel = (props) => {
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id} id={`slide-number-${item.id}`}>
-            <div className="video-time-line"></div>
+            <div className="progress-bar">
+              <div id={`progress-video-${item.id}`} className="" />
+            </div>
             <div className="reels-header-wrapper">
               <div className="reels-person-wrapper" onClick={changeOpenLogin}>
                 <img className="person-photo" src={item.avatar} alt="Avatar" />
@@ -41,7 +63,13 @@ const ReelsCarousel = (props) => {
             </div>
             <div className="reels-video-wrapper">
               {isDesktop ? (
-                <RCvideoDesk url={item.video} id={item.id} />
+                <RCvideoDesk
+                  videoDuration={item.videoDuration}
+                  isPlaying={isPlaying}
+                  togglePlayingVideo={togglePlayingVideo}
+                  url={item.video}
+                  id={item.id}
+                />
               ) : (
                 <RCvideoMob url={item.video} id={item.id} />
               )}

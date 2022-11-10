@@ -3,30 +3,51 @@ import Mute from "../../../assets/muted.png";
 import Unmute from "../../../assets/unmuted.svg";
 import "./styles.css";
 
-const RCvideoDesk = ({ url, id }) => {
+const RCvideoDesk = ({
+  url,
+  id,
+  videoDuration,
+  isPlaying,
+  togglePlayingVideo,
+}) => {
   const [isMuted, setIsMuted] = useState(false);
   const toggleMute = () => setIsMuted(!isMuted);
-  const [isPlaying, setIsPlaying] = useState(false);
-  //const playVideo = (e) => e.target.play();
-  //const pauseVideo = (e) => e.target.pause();
 
-  const playPauseVideo = () => {
-    if (!isPlaying) {
+  const playOrPauseVideo = () => {
+    if (isPlaying) {
+      togglePlayingVideo(videoDuration, id);
       document
         .getElementsByClassName("swiper-slide-active")[2]
         .getElementsByClassName("reels-video-wrapper")[0]
         .getElementsByTagName("video")[0]
         .play();
-      setIsPlaying(true);
     } else {
       document
         .getElementsByClassName("swiper-slide-active")[2]
         .getElementsByClassName("reels-video-wrapper")[0]
         .getElementsByTagName("video")[0]
         .pause();
-      setIsPlaying(false);
+      togglePlayingVideo(videoDuration, id);
     }
   };
+
+  // const playPauseVideo = () => {
+  //   if (!isPlaying) {
+  //     document
+  //       .getElementsByClassName("swiper-slide-active")[2]
+  //       .getElementsByClassName("reels-video-wrapper")[0]
+  //       .getElementsByTagName("video")[0]
+  //       .play();
+  //     setIsPlaying(true);
+  //   } else {
+  //     document
+  //       .getElementsByClassName("swiper-slide-active")[2]
+  //       .getElementsByClassName("reels-video-wrapper")[0]
+  //       .getElementsByTagName("video")[0]
+  //       .pause();
+  //     setIsPlaying(false);
+  //   }
+  // };
 
   return (
     <>
@@ -51,7 +72,9 @@ const RCvideoDesk = ({ url, id }) => {
         playsInline={true}
         muted={isMuted}
         src={url}
-        onClick={playPauseVideo}
+        //autoPlay={CHECK IF VIDEO ID = CURRENT SLIDE ID = true sino false}
+        // onClick={playPauseVideo}
+        onClick={playOrPauseVideo}
         type="video/mp4"
       />
     </>
