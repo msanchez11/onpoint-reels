@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
 import Mute from "../../../assets/muted.png";
 import Unmute from "../../../assets/unmuted.svg";
+import useWidthDetect from "../../../hooks/useWidthDetect";
 import "./styles.css";
 
 const RCvideoDesk = ({
@@ -8,46 +11,30 @@ const RCvideoDesk = ({
   id,
   videoDuration,
   isPlaying,
-  togglePlayingVideo,
+  togglePlayingVideoProgressBar,
 }) => {
+  const videoRef = useRef(null);
+  const { isDesktop } = useWidthDetect();
   const [isMuted, setIsMuted] = useState(false);
   const toggleMute = () => setIsMuted(!isMuted);
 
   const playOrPauseVideo = () => {
     if (isPlaying) {
-      togglePlayingVideo(videoDuration, id);
-      document
-        .getElementsByClassName("swiper-slide-active")[2]
-        .getElementsByClassName("reels-video-wrapper")[0]
-        .getElementsByTagName("video")[0]
-        .play();
+      togglePlayingVideoProgressBar(videoDuration, id);
+      videoRef.current?.play();
     } else {
-      document
-        .getElementsByClassName("swiper-slide-active")[2]
-        .getElementsByClassName("reels-video-wrapper")[0]
-        .getElementsByTagName("video")[0]
-        .pause();
-      togglePlayingVideo(videoDuration, id);
+      videoRef.current?.pause();
+      videoRef.current.currentTime = 0;
+      togglePlayingVideoProgressBar(videoDuration, id);
     }
   };
 
-  // const playPauseVideo = () => {
-  //   if (!isPlaying) {
-  //     document
-  //       .getElementsByClassName("swiper-slide-active")[2]
-  //       .getElementsByClassName("reels-video-wrapper")[0]
-  //       .getElementsByTagName("video")[0]
-  //       .play();
-  //     setIsPlaying(true);
-  //   } else {
-  //     document
-  //       .getElementsByClassName("swiper-slide-active")[2]
-  //       .getElementsByClassName("reels-video-wrapper")[0]
-  //       .getElementsByTagName("video")[0]
-  //       .pause();
-  //     setIsPlaying(false);
-  //   }
-  // };
+  useEffect(playOrPauseVideo, [
+    isPlaying,
+    togglePlayingVideoProgressBar,
+    videoDuration,
+    id,
+  ]);
 
   return (
     <>
@@ -66,17 +53,28 @@ const RCvideoDesk = ({
           className="mute-unmute-icon-desk"
         />
       )}
-      <video
-        id={`desktop-video-${id}`}
-        className="modal-reels-video-desktop"
-        playsInline={true}
-        muted={isMuted}
-        src={url}
-        //autoPlay={CHECK IF VIDEO ID = CURRENT SLIDE ID = true sino false}
-        // onClick={playPauseVideo}
-        onClick={playOrPauseVideo}
-        type="video/mp4"
-      />
+
+      {isDesktop ? (
+        <video
+          ref={videoRef}
+          id={`desktop-video-${id}`}
+          className="modal-reels-video-desktop"
+          playsInline={true}
+          muted={isMuted}
+          src={url}
+          type="video/mp4"
+        />
+      ) : (
+        <video
+          className="modal-reels-video-mobile"
+          ref={videoRef}
+          id={`mobile-video-${id}`}
+          playsInline={true}
+          muted={isMuted}
+          src={url}
+          type="video/mp4"
+        />
+      )}
     </>
   );
 };
