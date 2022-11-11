@@ -88,9 +88,7 @@
     margin-bottom: 0;
   }
   .stories-person-photo:hover {
-    width: initial;
-    height: initial;
-    margin-bottom: 0;
+    transform: none;
   }
 }
 
@@ -113,5 +111,8 @@
   }
   .stories-person-area {
     font-size: 10px;
+  }
+  .stories-person-photo:hover {
+    transform: none;
   }
 }

@@ -6,7 +6,7 @@ import Unmute from "../../../assets/unmuted.svg";
 import useWidthDetect from "../../../hooks/useWidthDetect";
 import "./styles.css";
 
-const RCvideoDesk = ({
+const CustomVideoTag = ({
   url,
   id,
   videoDuration,
@@ -43,14 +43,14 @@ const RCvideoDesk = ({
           src={Mute}
           alt="UnmuteVideo"
           onClick={toggleMute}
-          className="mute-unmute-icon-desk"
+          className="mute-unmute-icon"
         />
       ) : (
         <img
           src={Unmute}
           alt="MuteVideo"
           onClick={toggleMute}
-          className="mute-unmute-icon-desk"
+          className="mute-unmute-icon"
         />
       )}
 
@@ -79,4 +79,4 @@ const RCvideoDesk = ({
   );
 };
 
-export default RCvideoDesk;
+export default CustomVideoTag;
