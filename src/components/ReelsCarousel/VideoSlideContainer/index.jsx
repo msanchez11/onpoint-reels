@@ -9,17 +9,18 @@ import "../styles.css";
 import { useSwiperSlide } from "swiper/react";
 import CommSlideContainer from "../CommSlideContainer";
 
-const VideoSlideContainer = ({ item, changeOpenLogin }) => {
-  const mySwiperSlide = useSwiperSlide();
+const VideoSlideContainer = (props) => {
+  const { item, changeOpenLogin, showingComercial, setShowingComercial } =
+    props;
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showCommercial, setShowCommercial] = useState(true);
+  const mySwiperSlide = useSwiperSlide();
 
   useEffect(() => {
     setIsPlaying(mySwiperSlide.isActive);
   }, [mySwiperSlide.isActive]);
 
   const togglePlayingVideoProgressBar = (duration, videoNumber) => {
-    if (isPlaying) {
+    if (isPlaying && !showingComercial) {
       document
         .querySelector(":root")
         .style.setProperty("--duration", `${duration}s`);
@@ -32,28 +33,16 @@ const VideoSlideContainer = ({ item, changeOpenLogin }) => {
         .classList.remove("progress");
     }
   };
+
   const stopVideoAndOpenLoginModal = () => {
     setIsPlaying(false);
     changeOpenLogin();
   };
-
-  //const toggleShowCommercial = () => {
-  //setIsPlaying(false);
-  //Mostrar publicidad en el isActive
-  //setShowCommercial(true);
-  //Asignar class Animation a la barra de Adv
-  //En 10seg setShowCommercial(false), setIsPlaying(true)
-  //};
-  // TODO:
-  // IF 3slide visto, showCommercial TRUE & stopVideo & addProgressBarClassADV & set10seg to displaynone adv
-  // IF 6slide visto, openModalLogin
-
   return (
     <>
-      <CommSlideContainer
-        showCommercial={showCommercial}
-        setShowCommercial={setShowCommercial}
-      />
+      {showingComercial && (
+        <CommSlideContainer setShowingComercial={setShowingComercial} />
+      )}
       <div className="progress-bar">
         <div id={`progress-video-${item.id}`} className="" />
       </div>
@@ -69,7 +58,7 @@ const VideoSlideContainer = ({ item, changeOpenLogin }) => {
       <div className="reels-video-wrapper">
         <CustomVideoTag
           videoDuration={item.videoDuration}
-          isPlaying={isPlaying}
+          isPlaying={!showingComercial && isPlaying}
           togglePlayingVideoProgressBar={togglePlayingVideoProgressBar}
           url={item.video}
           id={item.id}
