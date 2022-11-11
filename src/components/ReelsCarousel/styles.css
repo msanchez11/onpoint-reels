@@ -11,7 +11,7 @@
 }
 #modal-reels .video-time-line,
 #modal-reels .reels-video-data,
-#modal-reels .reels-video-wrapper > .mute-unmute-icon-desk,
+#modal-reels .reels-video-wrapper > .mute-unmute-icon,
 #modal-reels .reels-video-velong {
   display: none;
 }
@@ -109,7 +109,7 @@
   font-size: 16px;
   color: #fff;
 }
-#modal-reels .swiper-slide-active .mute-unmute-icon-desk {
+#modal-reels .swiper-slide-active .mute-unmute-icon {
   display: initial;
 }
 

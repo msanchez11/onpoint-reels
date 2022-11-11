@@ -1,0 +1,31 @@
+.modal-reels-video-desktop {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+.mute-unmute-icon {
+  filter: brightness(0) invert(1);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 9;
+  top: 5%;
+  right: 5%;
+}
+
+.modal-reels-video-mobile {
+  height: 110%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 478px) {
+  .mute-unmute-icon {
+    right: 20%;
+  }
+}
+@media only screen and (max-width: 374px) {
+  .modal-reels-video {
+    height: 130%;
+    width: 120%;
+  }
+}
