@@ -7,7 +7,7 @@
       "avatar": "/assets/story1/Story_0001_Beccalways_Avatar.jpg",
       "boomerang": "/assets/story1/Story_0001_Beccalways_Boomerang.mp4",
       "video": "/assets/story1/Story_0001_Beccalways.mp4",
-      "videoDuration": 15,
+      "videoDuration": 16,
       "likes": 123,
       "comments": 50
     },
@@ -18,7 +18,7 @@
       "avatar": "/assets/story2/Story_0002_Janistrue_Avatar.jpg",
       "boomerang": "/assets/story2/Story_0002_Janistrue_Boomerang.mp4",
       "video": "/assets/story2/Story_0002_Janistrue.mp4",
-      "videoDuration": 16,
+      "videoDuration": 15,
       "likes": 123,
       "comments": 50
     },
@@ -29,7 +29,7 @@
       "avatar": "/assets/story3/Story_0003_Noel-Deyzel_Avatar.jpeg",
       "boomerang": "/assets/story3/Story_0003_Noel-Deyzel_Boomerang.mp4",
       "video": "/assets/story3/Story_0003_Noel-Deyzel.mp4",
-      "videoDuration": 24,
+      "videoDuration": 23.5,
       "likes": 123,
       "comments": 50
     },

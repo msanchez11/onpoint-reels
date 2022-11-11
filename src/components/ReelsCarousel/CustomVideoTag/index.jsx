@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
+import useWidthDetect from "../../../hooks/useWidthDetect";
 import Mute from "../../../assets/muted.png";
 import Unmute from "../../../assets/unmuted.svg";
-import useWidthDetect from "../../../hooks/useWidthDetect";
 import "./styles.css";
+import { useSwiper } from "swiper/react";
 
 const CustomVideoTag = ({
   url,
@@ -17,6 +18,11 @@ const CustomVideoTag = ({
   const { isDesktop } = useWidthDetect();
   const [isMuted, setIsMuted] = useState(false);
   const toggleMute = () => setIsMuted(!isMuted);
+  const swiper = useSwiper();
+
+  const goNextSlide = () => {
+    swiper.slideNext();
+  };
 
   const playOrPauseVideo = () => {
     if (isPlaying) {
@@ -61,6 +67,7 @@ const CustomVideoTag = ({
           className="modal-reels-video-desktop"
           playsInline={true}
           muted={isMuted}
+          onEnded={goNextSlide}
           src={url}
           type="video/mp4"
         />
@@ -70,6 +77,7 @@ const CustomVideoTag = ({
           ref={videoRef}
           id={`mobile-video-${id}`}
           playsInline={true}
+          onEnded={goNextSlide}
           muted={isMuted}
           src={url}
           type="video/mp4"

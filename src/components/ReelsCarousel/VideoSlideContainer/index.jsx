@@ -4,26 +4,15 @@ import Likes from "../../../assets/likes.svg";
 import Comments from "../../../assets/comment.svg";
 import Share from "../../../assets/share.svg";
 import VelongLogo from "../../../assets/velong_logo.svg";
-import "../styles.css";
 import "../styles-mobile.css";
+import "../styles.css";
 import { useSwiperSlide } from "swiper/react";
-import AdvSlideContainer from "../AdvSlideContainer";
+import CommSlideContainer from "../CommSlideContainer";
 
 const VideoSlideContainer = ({ item, changeOpenLogin }) => {
   const mySwiperSlide = useSwiperSlide();
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showCommercial, setShowCommercial] = useState(false);
-
-  const toggleShowCommercial = () => {
-    setIsPlaying(false);
-    //Mostrar publicidad en el isActive
-    setShowCommercial(true);
-    //Asignar class Animation a la barra de Adv
-    //En 10seg setShowCommercial(false), setIsPlaying(true)
-  };
-  // TODO:
-  // IF 3slide visto, showCommercial TRUE & stopVideo & addProgressBarClassADV & set10seg to displaynone adv
-  // IF 6slide visto, openModalLogin
+  const [showCommercial, setShowCommercial] = useState(true);
 
   useEffect(() => {
     setIsPlaying(mySwiperSlide.isActive);
@@ -48,9 +37,23 @@ const VideoSlideContainer = ({ item, changeOpenLogin }) => {
     changeOpenLogin();
   };
 
+  //const toggleShowCommercial = () => {
+  //setIsPlaying(false);
+  //Mostrar publicidad en el isActive
+  //setShowCommercial(true);
+  //Asignar class Animation a la barra de Adv
+  //En 10seg setShowCommercial(false), setIsPlaying(true)
+  //};
+  // TODO:
+  // IF 3slide visto, showCommercial TRUE & stopVideo & addProgressBarClassADV & set10seg to displaynone adv
+  // IF 6slide visto, openModalLogin
+
   return (
-    <div>
-      <AdvSlideContainer showCommercial={showCommercial} />
+    <>
+      <CommSlideContainer
+        showCommercial={showCommercial}
+        setShowCommercial={setShowCommercial}
+      />
       <div className="progress-bar">
         <div id={`progress-video-${item.id}`} className="" />
       </div>
@@ -90,7 +93,7 @@ const VideoSlideContainer = ({ item, changeOpenLogin }) => {
       <div className="reels-video-velong">
         <img src={VelongLogo} alt="VelongLogo" className="velongLogo" />
       </div>
-    </div>
+    </>
   );
 };
 
