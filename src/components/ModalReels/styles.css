@@ -7,14 +7,21 @@
 #modal-reels .close-container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 #modal-reels .close-container img {
   filter: brightness(0) invert(1);
   cursor: pointer;
+}
+#modal-reels .close-container .x-icon {
   width: 35px;
   height: 35px;
+}
+#modal-reels .close-container .logo-velong {
+  width: 29px;
+  height: 35px;
+  margin-left: 5px;
 }
 
 #modal-reels .last-div {
