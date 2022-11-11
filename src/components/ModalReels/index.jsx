@@ -1,10 +1,13 @@
 import ReactModal from "react-modal";
 import closeIcon from "../../assets/close.svg";
+import logoVelong from "../../assets/velong_logo.svg";
 import stylesCfg from "../../utils/modalReelsCfg.json";
 import ReelsCarousel from "../ReelsCarousel";
 import "./styles.css";
 
 const ModalReels = (props) => {
+  const videoIdSet = new Set();
+
   const { isOpen, changeOpenReels, changeOpenLogin, openInSlideX } = props;
   return (
     <ReactModal
@@ -18,12 +21,19 @@ const ModalReels = (props) => {
       onRequestClose={changeOpenReels}
     >
       <div className="close-container">
-        <img src={closeIcon} alt="X" onClick={changeOpenReels} />
+        <img src={logoVelong} alt="Velong" className="logo-velong" />
+        <img
+          src={closeIcon}
+          alt="Close"
+          onClick={changeOpenReels}
+          className="x-icon"
+        />
       </div>
       <div className="carousel-container">
         <ReelsCarousel
           changeOpenLogin={changeOpenLogin}
           openInSlideX={openInSlideX}
+          videoIdSet={videoIdSet}
         />
       </div>
     </ReactModal>
