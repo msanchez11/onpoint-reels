@@ -6,8 +6,8 @@
       "area": "Lifestyle",
       "avatar": "/assets/story1/Story_0001_Beccalways_Avatar.jpg",
       "boomerang": "/assets/story1/Story_0001_Beccalways_Boomerang.mp4",
-      "reelCover": "/assets/story1/Story_0001_Beccalways_Cover.jpg",
       "video": "/assets/story1/Story_0001_Beccalways.mp4",
+      "videoDuration": 16,
       "likes": 123,
       "comments": 50
     },
@@ -17,8 +17,8 @@
       "area": "Beauty & Care",
       "avatar": "/assets/story2/Story_0002_Janistrue_Avatar.jpg",
       "boomerang": "/assets/story2/Story_0002_Janistrue_Boomerang.mp4",
-      "reelCover": "/assets/story2/Story_0002_Janistrue_Cover.jpg",
       "video": "/assets/story2/Story_0002_Janistrue.mp4",
+      "videoDuration": 15,
       "likes": 123,
       "comments": 50
     },
@@ -28,8 +28,8 @@
       "area": "Bodybuilding",
       "avatar": "/assets/story3/Story_0003_Noel-Deyzel_Avatar.jpeg",
       "boomerang": "/assets/story3/Story_0003_Noel-Deyzel_Boomerang.mp4",
-      "reelCover": "/assets/story3/Story_0003_Noel-Deyzel_Cover.jpg",
       "video": "/assets/story3/Story_0003_Noel-Deyzel.mp4",
+      "videoDuration": 23.5,
       "likes": 123,
       "comments": 50
     },
@@ -39,8 +39,8 @@
       "area": "Fitness",
       "avatar": "/assets/story4/Story_0004_Tatiana-Lares_Avatar.jpg",
       "boomerang": "/assets/story4/Story_0004_Tatiana-Lares_Boomerang.mp4",
-      "reelCover": "/assets/story4/Story_0004_Tatiana-Lares_Cover.jpg",
       "video": "/assets/story4/Story_0004_Tatiana-Lares.mp4",
+      "videoDuration": 41,
       "likes": 123,
       "comments": 50
     },
@@ -50,8 +50,8 @@
       "area": "Healthy Eating",
       "avatar": "/assets/story5/Story_0005_Andy-Fvng_Avatar.jpeg",
       "boomerang": "/assets/story5/Story_0005_Andy-Fvng_Boomerang.mp4",
-      "reelCover": "/assets/story5/Story_0005_Andy-Fvng_Cover.jpg",
       "video": "/assets/story5/Story_0005_Andy-Fvng.mp4",
+      "videoDuration": 36,
       "likes": 123,
       "comments": 50
     },
@@ -61,8 +61,8 @@
       "area": "Healthy Eating",
       "avatar": "/assets/story6/Story_0006_TherapyJeff_Avatar.jpg",
       "boomerang": "/assets/story6/Story_0006_TherapyJeff_Boomerang.mp4",
-      "reelCover": "/assets/story6/Story_0006_TherapyJeff_Cover.jpg",
       "video": "/assets/story6/Story_0006_TherapyJeff.mp4",
+      "videoDuration": 55,
       "likes": 123,
       "comments": 50
     },
@@ -72,8 +72,8 @@
       "area": "Lifestyle",
       "avatar": "/assets/story7/Story_0007_LilyDoran_Avatar.jpg",
       "boomerang": "/assets/story7/Story_0007_LilyDoran_Boomerang.mp4",
-      "reelCover": "/assets/story7/Story_0007_LilyDoran_Cover.jpg",
       "video": "/assets/story7/Story_0007_LilyDoran.mp4",
+      "videoDuration": 31,
       "likes": 123,
       "comments": 50
     },
@@ -83,8 +83,8 @@
       "area": "Fitness",
       "avatar": "/assets/story8/Story_0008_Brit-Palmer_Avatar.jpg",
       "boomerang": "/assets/story8/Story_0008_Brit-Palmer_Boomerang.mp4",
-      "reelCover": "/assets/story8/Story_0008_Brit-Palmer_Cover.jpg",
       "video": "/assets/story8/Story_0008_Brit-Palmer.mp4",
+      "videoDuration": 20,
       "likes": 123,
       "comments": 50
     },
@@ -94,8 +94,8 @@
       "area": "Lifestyle",
       "avatar": "/assets/story9/Story_0009_Money-Ben_Avatar.jpg",
       "boomerang": "/assets/story9/Story_0009_Money-Ben_Boomerang.mp4",
-      "reelCover": "/assets/story9/Story_0009_Money-Ben_Cover.jpg",
       "video": "/assets/story9/Story_0009_Money-Ben.mp4",
+      "videoDuration": 22,
       "likes": 123,
       "comments": 50
     },
@@ -105,8 +105,8 @@
       "area": "Lifestyle",
       "avatar": "/assets/story10/Story_00010_LaynesLife_Avatar.jpg",
       "boomerang": "/assets/story10/Story_00010_LaynesLife_Boomerang.mp4",
-      "reelCover": "/assets/story10/Story_00010_LaynesLife_Cover.jpg",
       "video": "/assets/story10/Story_00010_LaynesLife.mp4",
+      "videoDuration": 6,
       "likes": 123,
       "comments": 50
     },
@@ -116,8 +116,8 @@
       "area": "Fitness",
       "avatar": "/assets/story11/Story_00011_Anto-Lokhorst_Avatar.jpg",
       "boomerang": "/assets/story11/Story_00011_Anto-Lokhorst_Boomerang.mp4",
-      "reelCover": "/assets/story11/Story_00011_Anto-Lokhorst_Cover.jpg",
       "video": "/assets/story11/Story_00011_Anto-Lokhorst.mp4",
+      "videoDuration": 13,
       "likes": 123,
       "comments": 50
     },
@@ -127,8 +127,8 @@
       "area": "Lifestyle",
       "avatar": "/assets/story12/Story_00012_SukiSweetkill_Avatar.jpg",
       "boomerang": "/assets/story12/Story_00012_SukiSweetkill_Boomerang.mp4",
-      "reelCover": "/assets/story12/Story_00012_SukiSweetkill_Cover.jpg",
       "video": "/assets/story12/Story_00012_SukiSweetkill.mp4",
+      "videoDuration": 17,
       "likes": 123,
       "comments": 50
     },
@@ -138,8 +138,8 @@
       "area": "Fitness",
       "avatar": "/assets/story13/Story_00013_Stefana-Avara_Avatar.jpg",
       "boomerang": "/assets/story13/Story_00013_Stefana-Avara_Boomerang.mp4",
-      "reelCover": "/assets/story13/Story_00013_Stefana-Avara_Cover.jpg",
       "video": "/assets/story13/Story_00013_Stefana-Avara.mp4",
+      "videoDuration": 22,
       "likes": 123,
       "comments": 50
     }

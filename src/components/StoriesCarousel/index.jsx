@@ -12,7 +12,6 @@ const StoriesCarousel = (props) => {
   const { changeOpenLogin, changeOpenReels, setGoToSlide } = props;
   const openModalInCorrectSlide = (id) => {
     setGoToSlide(id - 1);
-    console.log(id - 1);
     changeOpenReels();
   };
 

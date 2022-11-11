@@ -15,7 +15,6 @@ const ShortsCarousel = (props) => {
   const { isDesktop } = useWidthDetect();
   const openModalInCorrectSlide = (id) => {
     setGoToSlide(id - 1);
-    console.log(id - 1);
     changeOpenReels();
   };
 

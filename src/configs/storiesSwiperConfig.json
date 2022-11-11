@@ -1,18 +1,18 @@
 {
   "1920": {
-    "slidesPerView": 12.5
+    "slidesPerView": 13
   },
   "1600": {
-    "slidesPerView": 9
+    "slidesPerView": 11
   },
   "1440": {
-    "slidesPerView": 8
+    "slidesPerView": 9
   },
   "1200": {
-    "slidesPerView": 7
+    "slidesPerView": 8
   },
   "992": {
-    "slidesPerView": 6.5
+    "slidesPerView": 7
   },
   "900": {
     "slidesPerView": 6
