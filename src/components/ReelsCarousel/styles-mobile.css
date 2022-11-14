@@ -88,10 +88,13 @@
     right: 5%;
     z-index: 9;
   }
+  .reels-video-velong {
+    display: initial !important;
+  }
   .velongLogo {
     display: block !important;
     position: absolute;
-    bottom: 15%;
+    bottom: 12%;
     left: 5%;
     z-index: 9;
     width: 29px;

@@ -8,7 +8,14 @@ import "./styles.css";
 const ModalReels = (props) => {
   const videoIdSet = new Set();
 
-  const { isOpen, changeOpenReels, changeOpenLogin, openInSlideX } = props;
+  const {
+    isOpen,
+    changeOpenReels,
+    changeOpenLogin,
+    openInSlideX,
+    mustPlayVideo,
+    setMustPlayVideo,
+  } = props;
   return (
     <ReactModal
       style={stylesCfg}
@@ -34,6 +41,8 @@ const ModalReels = (props) => {
           changeOpenLogin={changeOpenLogin}
           openInSlideX={openInSlideX}
           videoIdSet={videoIdSet}
+          mustPlayVideo={mustPlayVideo}
+          setMustPlayVideo={setMustPlayVideo}
         />
       </div>
     </ReactModal>

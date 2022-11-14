@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import useWidthDetect from "../../../hooks/useWidthDetect";
@@ -7,16 +7,18 @@ import Unmute from "../../../assets/unmuted.svg";
 import "./styles.css";
 import { useSwiper } from "swiper/react";
 
-const CustomVideoTag = ({
-  url,
-  id,
-  videoDuration,
-  isPlaying,
-  togglePlayingVideoProgressBar,
-}) => {
+const CustomVideoTag = (props) => {
+  const {
+    url,
+    id,
+    videoDuration,
+    isPlaying,
+    togglePlayingVideoProgressBar,
+    isMuted,
+    setIsMuted,
+  } = props;
   const videoRef = useRef(null);
   const { isDesktop } = useWidthDetect();
-  const [isMuted, setIsMuted] = useState(false);
   const toggleMute = () => setIsMuted(!isMuted);
   const swiper = useSwiper();
 

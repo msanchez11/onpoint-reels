@@ -10,8 +10,17 @@ import breakpointConfig from "../../configs/reelsSwiperConfig.json";
 import "./styles.css";
 import "./styles-mobile.css";
 
-const ReelsCarousel = ({ changeOpenLogin, openInSlideX, videoIdSet }) => {
+const ReelsCarousel = (props) => {
+  const {
+    changeOpenLogin,
+    openInSlideX,
+    videoIdSet,
+    openModalLogin,
+    mustPlayVideo,
+    setMustPlayVideo,
+  } = props;
   const [showingComercial, setShowingComercial] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   const slideChanged = (prop) => {
     videoIdSet.add(prop);
@@ -19,6 +28,8 @@ const ReelsCarousel = ({ changeOpenLogin, openInSlideX, videoIdSet }) => {
       setShowingComercial(true);
     }
     if (videoIdSet.size === 7) {
+      // PAUSAR VIDEO ANTES DE ABRIR EL MODAL setIsPlaying(false);
+      setMustPlayVideo(true);
       changeOpenLogin();
     }
   };
@@ -27,6 +38,7 @@ const ReelsCarousel = ({ changeOpenLogin, openInSlideX, videoIdSet }) => {
     <div className="reels-main-wrapper">
       <Swiper
         className="reels-carrousel"
+        //direction="vertical" IMPOSIBLE
         modules={[Navigation]}
         breakpoints={breakpointConfig}
         navigation
@@ -34,7 +46,7 @@ const ReelsCarousel = ({ changeOpenLogin, openInSlideX, videoIdSet }) => {
         initialSlide={openInSlideX}
         onReachEnd={changeOpenLogin}
         onSwiper={(swiper) => videoIdSet.add(swiper.realIndex)}
-        onSlideChange={(swiper) => slideChanged(swiper.realIndex)} //METODO PARA SABER CUANDO SE CAMBIO UN SLIDE
+        onSlideChange={(swiper) => slideChanged(swiper.realIndex)}
       >
         {data.people.map((item) => (
           <SwiperSlide
@@ -44,9 +56,14 @@ const ReelsCarousel = ({ changeOpenLogin, openInSlideX, videoIdSet }) => {
           >
             <VideoSlideContainer
               item={item}
+              openModalLogin={openModalLogin}
               changeOpenLogin={changeOpenLogin}
               showingComercial={showingComercial}
               setShowingComercial={setShowingComercial}
+              isMuted={isMuted}
+              setIsMuted={setIsMuted}
+              mustPlayVideo={mustPlayVideo}
+              setMustPlayVideo={setMustPlayVideo}
             />
           </SwiperSlide>
         ))}
