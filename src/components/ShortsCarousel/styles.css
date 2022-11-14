@@ -87,4 +87,10 @@
   .shorts-header span {
     font-size: 14px;
   }
+  /*  AJUSTAR ALTO DE VIDEO MAS CHICOS
+  .short-video-wrapper {
+    aspect-ratio: 16 / 9;
+    width: 131px;
+    position: relative;
+  } */
 }

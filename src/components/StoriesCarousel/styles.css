@@ -96,13 +96,13 @@
   .stories-header span {
     color: rgb(141, 140, 140);
     margin: 10px;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 15.2px;
-    font-weight: 700;
+    font-weight: 400;
   }
   .stories-person-photo {
-    width: 57px;
-    height: 57px;
+    width: 63px;
+    height: 63px;
     padding: 2px;
     border: 1px solid #21daf3;
   }

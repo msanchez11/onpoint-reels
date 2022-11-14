@@ -3,7 +3,7 @@
     "slidesPerView": 10.2
   },
   "1920": {
-    "slidesPerView": 9
+    "slidesPerView": 9.5
   },
   "1800": {
     "slidesPerView": 8.6
@@ -51,13 +51,13 @@
     "slidesPerView": 2.3
   },
   "400": {
-    "slidesPerView": 2.05
+    "slidesPerView": 2.5
   },
   "370": {
-    "slidesPerView": 1.6
+    "slidesPerView": 2.3
   },
   "300": {
-    "slidesPerView": 1.4
+    "slidesPerView": 1.7
   },
   "220": {
     "slidesPerView": 1.1
