@@ -38,7 +38,6 @@ const ReelsCarousel = (props) => {
     <div className="reels-main-wrapper">
       <Swiper
         className="reels-carrousel"
-        //direction="vertical" IMPOSIBLE
         modules={[Navigation]}
         breakpoints={breakpointConfig}
         navigation
