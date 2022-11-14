@@ -9,11 +9,12 @@ import LoginIncentive from "./LoginIncentive";
 import "./styles.css";
 
 const ModalLogin = (props) => {
-  const { isOpen, changeOpenLogin } = props;
+  const { isOpen, changeOpenLogin, setMustPlayVideo } = props;
   const [showComingSoon, setShowComingSoon] = useState(false);
   const toggleComingSoon = () => setShowComingSoon(true);
   const onClose = () => {
     setShowComingSoon(false);
+    setMustPlayVideo(false);
     changeOpenLogin();
   };
 

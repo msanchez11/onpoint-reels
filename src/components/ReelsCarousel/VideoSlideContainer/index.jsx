@@ -10,10 +10,19 @@ import { useSwiperSlide } from "swiper/react";
 import CommSlideContainer from "../CommSlideContainer";
 
 const VideoSlideContainer = (props) => {
-  const { item, changeOpenLogin, showingComercial, setShowingComercial } =
-    props;
-  const [isPlaying, setIsPlaying] = useState(false);
+  const {
+    item,
+    changeOpenLogin,
+    //openModalLogin,
+    showingComercial,
+    setShowingComercial,
+    isMuted,
+    setIsMuted,
+    mustPlayVideo,
+    setMustPlayVideo,
+  } = props;
   const mySwiperSlide = useSwiperSlide();
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     setIsPlaying(mySwiperSlide.isActive);
@@ -35,7 +44,8 @@ const VideoSlideContainer = (props) => {
   };
 
   const stopVideoAndOpenLoginModal = () => {
-    setIsPlaying(false);
+    setMustPlayVideo(true);
+    //setIsPlaying(false);
     changeOpenLogin();
   };
   return (
@@ -58,11 +68,13 @@ const VideoSlideContainer = (props) => {
       <div className="reels-video-wrapper">
         <CustomVideoTag
           videoDuration={item.videoDuration}
-          isPlaying={!showingComercial && isPlaying}
+          isPlaying={!mustPlayVideo && !showingComercial && isPlaying}
+          setIsPlaying={setIsPlaying}
           togglePlayingVideoProgressBar={togglePlayingVideoProgressBar}
           url={item.video}
           id={item.id}
-          setIsPlaying={setIsPlaying}
+          isMuted={isMuted}
+          setIsMuted={setIsMuted}
         />
       </div>
       <div className="reels-video-data" onClick={stopVideoAndOpenLoginModal}>

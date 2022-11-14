@@ -6,12 +6,13 @@ import StoriesCarousel from "./components/StoriesCarousel";
 import ShortsCarousel from "./components/ShortsCarousel";
 
 function App() {
-  const [openModalReels, setOpenModalReels] = useState(false);
-  const toggleOpenReels = () => setOpenModalReels(!openModalReels);
   const [goToSlide, setGoToSlide] = useState(0);
 
+  const [openModalReels, setOpenModalReels] = useState(false);
+  const toggleOpenReels = () => setOpenModalReels(!openModalReels);
   const [openModalLogin, setOpenModalLogin] = useState(false);
   const toggleOpenLogin = () => setOpenModalLogin(!openModalLogin);
+  const [mustPlayVideo, setMustPlayVideo] = useState(false);
 
   return (
     <div id="stories-app" className="stories-body">
@@ -30,8 +31,15 @@ function App() {
         openInSlideX={goToSlide}
         changeOpenReels={toggleOpenReels}
         changeOpenLogin={toggleOpenLogin}
+        openModalLogin={openModalLogin}
+        mustPlayVideo={mustPlayVideo}
+        setMustPlayVideo={setMustPlayVideo}
       />
-      <ModalLogin isOpen={openModalLogin} changeOpenLogin={toggleOpenLogin} />
+      <ModalLogin
+        isOpen={openModalLogin}
+        changeOpenLogin={toggleOpenLogin}
+        setMustPlayVideo={setMustPlayVideo}
+      />
     </div>
   );
 }
