@@ -85,6 +85,11 @@
 
 @media only screen and (max-width: 450px) {
   .shorts-header span {
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .short-video-wrapper {
+    width: 160px;
+    height: 285px;
+    position: relative;
   }
 }

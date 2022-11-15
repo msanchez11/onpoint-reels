@@ -1,50 +1,65 @@
 {
   "1920": {
-    "slidesPerView": 13
+    "slidesPerView": 16
   },
   "1600": {
-    "slidesPerView": 11
+    "slidesPerView": 13
   },
   "1440": {
-    "slidesPerView": 9
+    "slidesPerView": 11
   },
   "1200": {
-    "slidesPerView": 8
+    "slidesPerView": 10
   },
   "992": {
-    "slidesPerView": 7
+    "slidesPerView": 9
   },
   "900": {
-    "slidesPerView": 6
+    "slidesPerView": 8.3
   },
   "800": {
-    "slidesPerView": 5.4
+    "slidesPerView": 7.3
   },
   "768": {
-    "slidesPerView": 5.2
+    "slidesPerView": 6.4
   },
   "700": {
-    "slidesPerView": 5
+    "slidesPerView": 6.2
+  },
+  "650": {
+    "slidesPerView": 5.8
   },
   "600": {
-    "slidesPerView": 4.8
+    "slidesPerView": 5.5
   },
   "550": {
-    "slidesPerView": 4.2
+    "slidesPerView": 5.2
+  },
+  "450": {
+    "slidesPerView": 4.8
   },
   "400": {
     "slidesPerView": 4.5
   },
   "375": {
-    "slidesPerView": 4.5
+    "slidesPerView": 4.3
+  },
+  "340": {
+    "slidesPerView": 3.7
   },
   "300": {
-    "slidesPerView": 3.5
+    "slidesPerView": 3.3
+  },
+  "250": {
+    "slidesPerView": 2.9
   },
   "200": {
-    "slidesPerView": 2.5
+    "slidesPerView": 2.2
   },
-  "100": {
-    "slidesPerView": 1.5
+  "150": {
+    "slidesPerView": 1.8
+  },
+  "130": {
+    "slidesPerView": 1
   }
 }

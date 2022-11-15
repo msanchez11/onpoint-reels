@@ -10,17 +10,25 @@ import { useSwiperSlide } from "swiper/react";
 import CommSlideContainer from "../CommSlideContainer";
 
 const VideoSlideContainer = (props) => {
-  const { item, changeOpenLogin, showingComercial, setShowingComercial } =
-    props;
-  const [isPlaying, setIsPlaying] = useState(false);
+  const {
+    item,
+    changeOpenLogin,
+    showingComercial,
+    setShowingComercial,
+    isMuted,
+    setIsMuted,
+    mustPlayVideo,
+    setMustPlayVideo,
+  } = props;
   const mySwiperSlide = useSwiperSlide();
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     setIsPlaying(mySwiperSlide.isActive);
   }, [mySwiperSlide.isActive]);
 
   const togglePlayingVideoProgressBar = (duration, videoNumber) => {
-    if (isPlaying && !showingComercial) {
+    if (!mustPlayVideo && !showingComercial && isPlaying) {
       document
         .querySelector(":root")
         .style.setProperty("--duration", `${duration}s`);
@@ -35,7 +43,7 @@ const VideoSlideContainer = (props) => {
   };
 
   const stopVideoAndOpenLoginModal = () => {
-    setIsPlaying(false);
+    setMustPlayVideo(true);
     changeOpenLogin();
   };
   return (
@@ -58,11 +66,13 @@ const VideoSlideContainer = (props) => {
       <div className="reels-video-wrapper">
         <CustomVideoTag
           videoDuration={item.videoDuration}
-          isPlaying={!showingComercial && isPlaying}
+          isPlaying={!mustPlayVideo && !showingComercial && isPlaying}
+          setIsPlaying={setIsPlaying}
           togglePlayingVideoProgressBar={togglePlayingVideoProgressBar}
           url={item.video}
           id={item.id}
-          setIsPlaying={setIsPlaying}
+          isMuted={isMuted}
+          setIsMuted={setIsMuted}
         />
       </div>
       <div className="reels-video-data" onClick={stopVideoAndOpenLoginModal}>
@@ -80,7 +90,12 @@ const VideoSlideContainer = (props) => {
         </div>
       </div>
       <div className="reels-video-velong">
-        <img src={VelongLogo} alt="VelongLogo" className="velongLogo" />
+        <img
+          src={VelongLogo}
+          alt="VelongLogo"
+          className="velongLogo"
+          onClick={stopVideoAndOpenLoginModal}
+        />
       </div>
     </>
   );
