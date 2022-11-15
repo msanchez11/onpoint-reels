@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
+import "swiper/css/bundle";
 import VideoSlideContainer from "./VideoSlideContainer";
 import data from "../../db/database.json";
 import breakpointConfig from "../../configs/reelsSwiperConfig.json";
@@ -17,6 +15,7 @@ const ReelsCarousel = (props) => {
     videoIdSet,
     mustPlayVideo,
     setMustPlayVideo,
+    changeOpenReels,
   } = props;
   const [showingComercial, setShowingComercial] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
@@ -24,13 +23,18 @@ const ReelsCarousel = (props) => {
   const slideChanged = (prop) => {
     setShowingComercial(false);
     videoIdSet.add(prop);
-    if (videoIdSet.size === 4) {
-      setShowingComercial(true);
-    }
-    if (videoIdSet.size === 7) {
+    if (videoIdSet.size === 6) {
       setMustPlayVideo(true);
       changeOpenLogin();
     }
+    if (videoIdSet.size === 3) {
+      videoIdSet.add(prop + 1);
+      setShowingComercial(true);
+    }
+    if (videoIdSet.size === 0) {
+      videoIdSet.add(prop);
+    }
+    console.log(videoIdSet);
   };
 
   return (
@@ -40,10 +44,8 @@ const ReelsCarousel = (props) => {
         modules={[Navigation]}
         breakpoints={breakpointConfig}
         navigation
-        centeredSlides={true}
+        centeredSlides
         initialSlide={openInSlideX}
-        onReachEnd={changeOpenLogin}
-        onSwiper={(swiper) => videoIdSet.add(swiper.realIndex)}
         onSlideChange={(swiper) => slideChanged(swiper.realIndex)}
       >
         {data.people.map((item) => (
@@ -61,6 +63,7 @@ const ReelsCarousel = (props) => {
               setIsMuted={setIsMuted}
               mustPlayVideo={mustPlayVideo}
               setMustPlayVideo={setMustPlayVideo}
+              changeOpenReels={changeOpenReels}
             />
           </SwiperSlide>
         ))}

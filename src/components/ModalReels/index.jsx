@@ -53,6 +53,7 @@ const ModalReels = (props) => {
           videoIdSet={videoIdSet}
           mustPlayVideo={mustPlayVideo}
           setMustPlayVideo={setMustPlayVideo}
+          changeOpenReels={changeOpenReels}
         />
       </div>
     </ReactModal>
