@@ -44,13 +44,13 @@
   transform: scale(1.1);
 }
 .stories-person-name {
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
 }
 .stories-person-area {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 15px;
   text-align: center;
 }
 
@@ -92,19 +92,16 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 500px) {
   .stories-header span {
     color: rgb(141, 140, 140);
-    margin: 10px;
     font-size: 12px;
-    line-height: 15.2px;
-    font-weight: 400;
   }
   .stories-person-photo {
-    width: 63px;
-    height: 63px;
+    width: 76px;
+    height: 76px;
     padding: 2px;
-    border: 1px solid #21daf3;
+    border: 2px solid #21daf3;
   }
   .stories-person-name {
     font-size: 12px;

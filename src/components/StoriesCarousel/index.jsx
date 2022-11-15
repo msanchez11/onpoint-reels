@@ -28,6 +28,7 @@ const StoriesCarousel = (props) => {
         modules={[Navigation]}
         breakpoints={breakpointConfig}
         navigation
+        centerInsufficientSlides
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id}>
