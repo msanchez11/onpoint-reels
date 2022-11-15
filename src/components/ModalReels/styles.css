@@ -34,11 +34,8 @@
     padding: 0 !important;
   }
 
-  #modal-reels .close-container img {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    z-index: 9;
+  #modal-reels .close-container {
+    display: none;
   }
   #modal-reels .close-container .logo-velong {
     display: none;

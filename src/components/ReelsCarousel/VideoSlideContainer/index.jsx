@@ -4,6 +4,7 @@ import Likes from "../../../assets/likes.svg";
 import Comments from "../../../assets/comment.svg";
 import Share from "../../../assets/share.svg";
 import VelongLogo from "../../../assets/velong_logo.svg";
+import CloseLogo from "../../../assets/close.svg";
 import "../styles-mobile.css";
 import "../styles.css";
 import { useSwiperSlide } from "swiper/react";
@@ -19,6 +20,7 @@ const VideoSlideContainer = (props) => {
     setIsMuted,
     mustPlayVideo,
     setMustPlayVideo,
+    changeOpenReels,
   } = props;
   const mySwiperSlide = useSwiperSlide();
   const [isPlaying, setIsPlaying] = useState(false);
@@ -69,10 +71,11 @@ const VideoSlideContainer = (props) => {
           isPlaying={!mustPlayVideo && !showingComercial && isPlaying}
           setIsPlaying={setIsPlaying}
           togglePlayingVideoProgressBar={togglePlayingVideoProgressBar}
-          url={item.video}
           id={item.id}
+          url={item.video}
           isMuted={isMuted}
           setIsMuted={setIsMuted}
+          changeOpenLogin={changeOpenLogin}
         />
       </div>
       <div className="reels-video-data" onClick={stopVideoAndOpenLoginModal}>
@@ -95,6 +98,12 @@ const VideoSlideContainer = (props) => {
           alt="VelongLogo"
           className="velongLogo"
           onClick={stopVideoAndOpenLoginModal}
+        />
+        <img
+          onClick={changeOpenReels}
+          className="slide-close-icon"
+          src={CloseLogo}
+          alt="Close"
         />
       </div>
     </>
