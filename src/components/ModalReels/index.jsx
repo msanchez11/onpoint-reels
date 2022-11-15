@@ -7,7 +7,6 @@ import "./styles.css";
 
 const ModalReels = (props) => {
   const videoIdSet = new Set();
-
   const {
     isOpen,
     changeOpenReels,
@@ -16,6 +15,12 @@ const ModalReels = (props) => {
     mustPlayVideo,
     setMustPlayVideo,
   } = props;
+
+  const triggerModalLoginAndPauseVideo = () => {
+    setMustPlayVideo(true);
+    changeOpenLogin();
+  };
+
   return (
     <ReactModal
       style={stylesCfg}
@@ -28,7 +33,12 @@ const ModalReels = (props) => {
       onRequestClose={changeOpenReels}
     >
       <div className="close-container">
-        <img src={logoVelong} alt="Velong" className="logo-velong" />
+        <img
+          src={logoVelong}
+          alt="Velong"
+          className="logo-velong"
+          onClick={triggerModalLoginAndPauseVideo}
+        />
         <img
           src={closeIcon}
           alt="Close"

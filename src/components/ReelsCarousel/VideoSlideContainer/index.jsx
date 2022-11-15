@@ -13,7 +13,6 @@ const VideoSlideContainer = (props) => {
   const {
     item,
     changeOpenLogin,
-    //openModalLogin,
     showingComercial,
     setShowingComercial,
     isMuted,
@@ -29,7 +28,7 @@ const VideoSlideContainer = (props) => {
   }, [mySwiperSlide.isActive]);
 
   const togglePlayingVideoProgressBar = (duration, videoNumber) => {
-    if (isPlaying && !showingComercial) {
+    if (!mustPlayVideo && !showingComercial && isPlaying) {
       document
         .querySelector(":root")
         .style.setProperty("--duration", `${duration}s`);
@@ -45,7 +44,6 @@ const VideoSlideContainer = (props) => {
 
   const stopVideoAndOpenLoginModal = () => {
     setMustPlayVideo(true);
-    //setIsPlaying(false);
     changeOpenLogin();
   };
   return (
@@ -92,7 +90,12 @@ const VideoSlideContainer = (props) => {
         </div>
       </div>
       <div className="reels-video-velong">
-        <img src={VelongLogo} alt="VelongLogo" className="velongLogo" />
+        <img
+          src={VelongLogo}
+          alt="VelongLogo"
+          className="velongLogo"
+          onClick={stopVideoAndOpenLoginModal}
+        />
       </div>
     </>
   );

@@ -15,7 +15,6 @@ const ReelsCarousel = (props) => {
     changeOpenLogin,
     openInSlideX,
     videoIdSet,
-    openModalLogin,
     mustPlayVideo,
     setMustPlayVideo,
   } = props;
@@ -23,12 +22,12 @@ const ReelsCarousel = (props) => {
   const [isMuted, setIsMuted] = useState(true);
 
   const slideChanged = (prop) => {
+    setShowingComercial(false);
     videoIdSet.add(prop);
-    if (videoIdSet.size === 4) {
+    if (videoIdSet.size <= 4) {
       setShowingComercial(true);
     }
     if (videoIdSet.size === 7) {
-      // PAUSAR VIDEO ANTES DE ABRIR EL MODAL setIsPlaying(false);
       setMustPlayVideo(true);
       changeOpenLogin();
     }
@@ -55,7 +54,6 @@ const ReelsCarousel = (props) => {
           >
             <VideoSlideContainer
               item={item}
-              openModalLogin={openModalLogin}
               changeOpenLogin={changeOpenLogin}
               showingComercial={showingComercial}
               setShowingComercial={setShowingComercial}

@@ -85,12 +85,11 @@
 
 @media only screen and (max-width: 450px) {
   .shorts-header span {
-    font-size: 14px;
+    font-size: 12px;
   }
-  /*  AJUSTAR ALTO DE VIDEO MAS CHICOS
   .short-video-wrapper {
-    aspect-ratio: 16 / 9;
-    width: 131px;
+    width: 160px;
+    height: 285px;
     position: relative;
-  } */
+  }
 }
