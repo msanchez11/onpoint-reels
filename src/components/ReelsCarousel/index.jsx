@@ -24,7 +24,7 @@ const ReelsCarousel = (props) => {
   const slideChanged = (prop) => {
     setShowingComercial(false);
     videoIdSet.add(prop);
-    if (videoIdSet.size <= 4) {
+    if (videoIdSet.size === 4) {
       setShowingComercial(true);
     }
     if (videoIdSet.size === 7) {
