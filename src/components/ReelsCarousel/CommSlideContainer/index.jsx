@@ -11,10 +11,14 @@ const CommSlideContainer = ({ setShowingComercial }) => {
 
   useEffect(() => {
     setTimeout(() => setShowingComercial(false), 10000);
-  }, []);
+  }, [setShowingComercial]);
+
+  const closeCommercial = () => {
+    setShowingComercial(false);
+  };
 
   return (
-    <div className="comm-wrapper">
+    <div className="comm-wrapper" onClick={closeCommercial}>
       <div className="comm-progress-bar">
         <div className="comm-progress" />
       </div>
