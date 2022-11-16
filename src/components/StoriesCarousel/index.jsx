@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import data from "../../db/database.json";
+import velongLogo from "../../assets/velong_logo.svg";
 import breakpointConfig from "../../configs/storiesSwiperConfig.json";
 import "./styles.css";
 
@@ -18,10 +19,13 @@ const StoriesCarousel = (props) => {
   return (
     <div className="all-stories-wrapper">
       <div className="stories-header">
-        <span>CREATORS BUZZ</span>
-        <span className="see-all" onClick={changeOpenLogin}>
-          SEE ALL
-        </span>
+        <span>Creators Voice</span>
+        <img
+          className="header-velong-logo"
+          src={velongLogo}
+          alt=""
+          onClick={changeOpenLogin}
+        />
       </div>
       <Swiper
         className="stories-carrousel"
@@ -29,6 +33,7 @@ const StoriesCarousel = (props) => {
         breakpoints={breakpointConfig}
         navigation
         centerInsufficientSlides
+        breakpointsBase={"container"}
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id}>
