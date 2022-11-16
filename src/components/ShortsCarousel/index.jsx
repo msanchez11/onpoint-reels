@@ -29,6 +29,7 @@ const ShortsCarousel = (props) => {
       <Swiper
         className="shorts-carrousel"
         modules={[Navigation, Scrollbar]}
+        breakpointsBase={"container"}
         breakpoints={breakpointConfig}
         navigation
       >
