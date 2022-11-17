@@ -21,7 +21,7 @@ const StoriesCarousel = (props) => {
       <div className="stories-header">
         <span>Creators Voice</span>
         <img
-          className="header-velong-logo"
+          className="header-stories-velong-logo"
           src={velongLogo}
           alt=""
           onClick={changeOpenLogin}
@@ -33,7 +33,6 @@ const StoriesCarousel = (props) => {
         breakpoints={breakpointConfig}
         navigation
         centerInsufficientSlides
-        breakpointsBase={"container"}
       >
         {data.people.map((item) => (
           <SwiperSlide key={item.id}>

@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CustomVideoTag from "../CustomVideoTag";
 import Likes from "../../../assets/likes.svg";
 import Comments from "../../../assets/comment.svg";
 import Share from "../../../assets/share.svg";
 import VelongLogo from "../../../assets/velong_logo.svg";
 import CloseLogo from "../../../assets/close.svg";
+import Mute from "../../../assets/muted.png";
+import Unmute from "../../../assets/unmuted.svg";
 import "../styles-mobile.css";
 import "../styles.css";
-import { useSwiperSlide } from "swiper/react";
+
 import CommSlideContainer from "../CommSlideContainer";
 
 const VideoSlideContainer = (props) => {
+  const toggleMute = () => setIsMuted(!isMuted);
   const {
     item,
     changeOpenLogin,
@@ -22,32 +25,11 @@ const VideoSlideContainer = (props) => {
     setMustPlayVideo,
     changeOpenReels,
   } = props;
-  const mySwiperSlide = useSwiperSlide();
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  useEffect(() => {
-    setIsPlaying(mySwiperSlide.isActive);
-  }, [mySwiperSlide.isActive]);
-
-  const togglePlayingVideoProgressBar = (duration, videoNumber) => {
-    if (!mustPlayVideo && !showingComercial && isPlaying) {
-      document
-        .querySelector(":root")
-        .style.setProperty("--duration", `${duration}s`);
-      document
-        .getElementById(`progress-video-${videoNumber}`)
-        .classList.add("progress");
-    } else {
-      document
-        .getElementById(`progress-video-${videoNumber}`)
-        .classList.remove("progress");
-    }
-  };
-
   const stopVideoAndOpenLoginModal = () => {
     setMustPlayVideo(true);
     changeOpenLogin();
   };
+
   return (
     <>
       {showingComercial && (
@@ -66,13 +48,27 @@ const VideoSlideContainer = (props) => {
         </div>
       </div>
       <div className="reels-video-wrapper">
+        {isMuted ? (
+          <img
+            src={Mute}
+            alt="UnmuteVideo"
+            onClick={toggleMute}
+            className="mute-unmute-icon"
+          />
+        ) : (
+          <img
+            src={Unmute}
+            alt="MuteVideo"
+            onClick={toggleMute}
+            className="mute-unmute-icon"
+          />
+        )}
         <CustomVideoTag
           videoDuration={item.videoDuration}
-          isPlaying={!mustPlayVideo && !showingComercial && isPlaying}
-          setIsPlaying={setIsPlaying}
-          togglePlayingVideoProgressBar={togglePlayingVideoProgressBar}
+          mustPlay={!mustPlayVideo && !showingComercial}
           id={item.id}
           url={item.video}
+          posterVid={item.cover}
           isMuted={isMuted}
           setIsMuted={setIsMuted}
           changeOpenLogin={changeOpenLogin}
