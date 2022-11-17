@@ -1,6 +1,7 @@
 :root {
   --duration: 10s;
   --min-duration: 0s;
+  --paused-time: 0%;
 }
 
 /* COMMON SLIDES */
@@ -19,13 +20,13 @@
 #modal-reels .reels-person-wrapper {
   position: absolute;
   bottom: 5%;
-  left: calc(50% - 50px);
+  left: calc(50% - 70px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: 100px;
+  width: 140px;
 }
 .person-photo {
   width: 58px;
@@ -76,11 +77,12 @@
   left: 5%;
   overflow: hidden;
 }
-#modal-reels .swiper-slide-active > .progress-bar > .progress {
+/* #modal-reels .swiper-slide-active > .progress-bar > .progress {
   width: 100%;
   height: 100%;
   background-color: #fff;
   transform: translateX(-100%);
+  transform: translateX(calc(-100% + var(--paused-time)));
   animation: fill-progress var(--duration) linear;
   border-radius: 10px;
 }
@@ -88,6 +90,13 @@
   to {
     transform: translateX(0%);
   }
+} */
+#modal-reels .swiper-slide-active > .progress-bar > .progress {
+  width: var(--paused-time);
+  height: 100%;
+  background-color: #fff;
+  transform: translateX(calc(-100% + var(--paused-time)));
+  border-radius: 10px;
 }
 
 #modal-reels .swiper-slide-active .reels-header-wrapper {
@@ -125,6 +134,11 @@
   right: 5%;
   z-index: 9;
   color: white;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 #modal-reels .swiper-slide-active .reels-video-data > .data-likes,
 #modal-reels .swiper-slide-active .reels-video-data > .data-comments,
@@ -143,6 +157,21 @@
   width: 25px;
   height: 25px;
   cursor: pointer;
+}
+.mute-unmute-icon {
+  filter: brightness(0) invert(1);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 9;
+  top: 5%;
+  right: 5%;
+}
+
+@media only screen and (max-width: 478px) {
+  .mute-unmute-icon {
+    right: 20%;
+  }
 }
 @media only screen and (max-width: 450px) {
   #modal-reels .swiper-slide {

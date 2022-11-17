@@ -1,90 +1,62 @@
-import React from "react";
-import { useRef } from "react";
-import { useEffect } from "react";
-import useWidthDetect from "../../../hooks/useWidthDetect";
-import Mute from "../../../assets/muted.png";
-import Unmute from "../../../assets/unmuted.svg";
+import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
-import { useSwiper } from "swiper/react";
+import { useSwiper, useSwiperSlide } from "swiper/react";
+import PlayIcon from "../../../assets/Play_icon.svg";
 
 const CustomVideoTag = (props) => {
-  const {
-    url,
-    id,
-    videoDuration,
-    isPlaying,
-    togglePlayingVideoProgressBar,
-    isMuted,
-    setIsMuted,
-  } = props;
+  const { url, id, posterVid, isMuted, mustPlay } = props;
+  const mySwiper = useSwiper();
+  const mySwiperSlide = useSwiperSlide();
   const videoRef = useRef(null);
-  const { isDesktop } = useWidthDetect();
-  const toggleMute = () => setIsMuted(!isMuted);
-  const swiper = useSwiper();
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  const goNextSlide = () => {
-    swiper.slideNext();
+  useEffect(() => {
+    setIsPlaying(mySwiperSlide.isActive);
+  }, [mySwiperSlide.isActive]);
+
+  useEffect(() => {
+    if (mustPlay && isPlaying) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  }, [isPlaying, videoRef, mustPlay]);
+
+  const handleOnTimeUpdate = (data, id) => {
+    data.currentTime === data.duration && mySwiper.slideNext();
+
+    data.currentTime === data.duration && id === 13 && mySwiper.slideTo(0);
+
+    const percentViewed = Math.round((data.currentTime * 100) / data.duration);
+    document
+      .querySelector(":root")
+      .style.setProperty("--paused-time", `${percentViewed}%`);
+    document.getElementById(`progress-video-${id}`).classList.add("progress");
   };
 
   const playOrPauseVideo = () => {
-    if (isPlaying) {
-      togglePlayingVideoProgressBar(videoDuration, id);
-      videoRef.current?.play();
-    } else {
-      videoRef.current?.pause();
-      videoRef.current.currentTime = 0;
-      togglePlayingVideoProgressBar(videoDuration, id);
-    }
+    mySwiperSlide.isActive && setIsPlaying(!isPlaying);
+    !mySwiperSlide.isActive && mySwiper.slideTo(id - 1);
   };
-
-  useEffect(playOrPauseVideo, [
-    isPlaying,
-    togglePlayingVideoProgressBar,
-    videoDuration,
-    id,
-  ]);
 
   return (
     <>
-      {isMuted ? (
-        <img
-          src={Mute}
-          alt="UnmuteVideo"
-          onClick={toggleMute}
-          className="mute-unmute-icon"
-        />
-      ) : (
-        <img
-          src={Unmute}
-          alt="MuteVideo"
-          onClick={toggleMute}
-          className="mute-unmute-icon"
-        />
+      {mySwiperSlide.isActive && !isPlaying && (
+        <img className="modal-reels-play-icon" src={PlayIcon} alt="Play!" />
       )}
-
-      {isDesktop ? (
-        <video
-          ref={videoRef}
-          id={`desktop-video-${id}`}
-          className="modal-reels-video-desktop"
-          playsInline={true}
-          muted={isMuted}
-          onEnded={goNextSlide}
-          src={url}
-          type="video/mp4"
-        />
-      ) : (
-        <video
-          className="modal-reels-video-mobile"
-          ref={videoRef}
-          id={`mobile-video-${id}`}
-          playsInline={true}
-          onEnded={goNextSlide}
-          muted={isMuted}
-          src={url}
-          type="video/mp4"
-        />
-      )}
+      <video
+        className="modal-reels-video"
+        preload="none"
+        poster={`assets/story${id}/${posterVid}.jpg`}
+        ref={videoRef}
+        onClick={playOrPauseVideo}
+        onTimeUpdate={() => handleOnTimeUpdate(videoRef.current, id)}
+        id={`desktop-video-${id}`}
+        playsInline={true}
+        muted={isMuted}
+        src={url}
+        type="video/mp4"
+      />
     </>
   );
 };

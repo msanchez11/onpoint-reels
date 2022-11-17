@@ -23,18 +23,17 @@ const ReelsCarousel = (props) => {
   const slideChanged = (prop) => {
     setShowingComercial(false);
     videoIdSet.add(prop);
-    if (videoIdSet.size === 6) {
+    if (videoIdSet.size === 7) {
       setMustPlayVideo(true);
       changeOpenLogin();
     }
-    if (videoIdSet.size === 3) {
+    if (videoIdSet.size === 4) {
       videoIdSet.add(prop + 1);
       setShowingComercial(true);
     }
     if (videoIdSet.size === 0) {
       videoIdSet.add(prop);
     }
-    console.log(videoIdSet);
   };
 
   return (
@@ -45,8 +44,11 @@ const ReelsCarousel = (props) => {
         breakpoints={breakpointConfig}
         navigation
         centeredSlides
+        //loop
         initialSlide={openInSlideX}
         onSlideChange={(swiper) => slideChanged(swiper.realIndex)}
+        onSwiper={(swiper) => slideChanged(swiper.realIndex)}
+        simulateTouch={false}
       >
         {data.people.map((item) => (
           <SwiperSlide

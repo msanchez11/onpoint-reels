@@ -7,18 +7,20 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  padding-bottom: 5px;
 }
 .stories-header span {
-  color: rgb(141, 140, 140);
+  color: rgb(0, 0, 0);
   font-size: 13px;
   line-height: 15px;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
 }
-.stories-header .see-all {
-  color: #51d0f7;
-  text-decoration: none;
-  cursor: pointer;
+.header-stories-velong-logo {
+  filter: brightness(0);
+  width: 15px;
+  height: auto;
 }
 .stories-person-wrapper {
   display: flex;
@@ -57,9 +59,6 @@
 /* Swiper Css Modificators */
 .stories-carrousel .swiper-button-disabled {
   opacity: 0 !important;
-}
-.stories-carrousel .swiper-wrapper {
-  margin-bottom: 30px;
 }
 .stories-carrousel .swiper-button-next,
 .stories-carrousel .swiper-button-prev {
