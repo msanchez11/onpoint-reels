@@ -11,10 +11,10 @@
   padding-bottom: 5px;
 }
 .stories-header span {
-  color: rgb(141, 140, 140);
+  color: rgb(0, 0, 0);
   font-size: 13px;
   line-height: 15px;
-  font-weight: 700;
+  font-weight: 400;
   text-align: center;
 }
 .header-stories-velong-logo {
