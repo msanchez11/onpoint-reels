@@ -28,7 +28,7 @@ const ModalReels = (props) => {
       id={"modal-reels"}
       overlayClassName={"reels-modal-overlay"}
       className={"reels-modal-content"}
-      parentSelector={() => document.querySelector("#stories-app")}
+      parentSelector={() => document.querySelector("#shorts-app")}
       ariaHideApp={false}
       onRequestClose={changeOpenReels}
     >

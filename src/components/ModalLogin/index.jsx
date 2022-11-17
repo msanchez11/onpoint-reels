@@ -25,7 +25,7 @@ const ModalLogin = (props) => {
       id={"modal-login"}
       overlayClassName={"login-modal-overlay"}
       className={"login-modal-content"}
-      parentSelector={() => document.querySelector("#stories-app")}
+      parentSelector={() => document.querySelector("#shorts-app")}
       ariaHideApp={false}
       onRequestClose={onClose}
     >

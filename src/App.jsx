@@ -1,9 +1,8 @@
 import { useState } from "react";
-import "./App.css";
 import ModalLogin from "./components/ModalLogin";
 import ModalReels from "./components/ModalReels";
-import StoriesCarousel from "./components/StoriesCarousel";
 import ShortsCarousel from "./components/ShortsCarousel";
+import "./App.css";
 
 function App() {
   const [goToSlide, setGoToSlide] = useState(0);
@@ -15,12 +14,7 @@ function App() {
   const [mustPlayVideo, setMustPlayVideo] = useState(false);
 
   return (
-    <div id="stories-app" className="stories-body">
-      <StoriesCarousel
-        setGoToSlide={setGoToSlide}
-        changeOpenReels={toggleOpenReels}
-        changeOpenLogin={toggleOpenLogin}
-      />
+    <div id="shorts-app" className="shorts-body">
       <ShortsCarousel
         setGoToSlide={setGoToSlide}
         changeOpenReels={toggleOpenReels}
