@@ -7,7 +7,7 @@
       "avatar": "/assets/story1/Story_0001_Beccalways_Avatar.jpg",
       "boomerang": "/assets/story1/Story_0001_Beccalways_Boomerang.mp4",
       "video": "/assets/story1/Story_0001_Beccalways.mp4",
-      "videoDuration": 16,
+      "cover": "Story_0001_Beccalways_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -18,7 +18,7 @@
       "avatar": "/assets/story2/Story_0002_Janistrue_Avatar.jpg",
       "boomerang": "/assets/story2/Story_0002_Janistrue_Boomerang.mp4",
       "video": "/assets/story2/Story_0002_Janistrue.mp4",
-      "videoDuration": 15,
+      "cover": "Story_0002_Janistrue_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -29,7 +29,7 @@
       "avatar": "/assets/story3/Story_0003_Noel-Deyzel_Avatar.jpeg",
       "boomerang": "/assets/story3/Story_0003_Noel-Deyzel_Boomerang.mp4",
       "video": "/assets/story3/Story_0003_Noel-Deyzel.mp4",
-      "videoDuration": 23.5,
+      "cover": "Story_0003_Noel-Deyzel_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -40,7 +40,7 @@
       "avatar": "/assets/story4/Story_0004_Tatiana-Lares_Avatar.jpg",
       "boomerang": "/assets/story4/Story_0004_Tatiana-Lares_Boomerang.mp4",
       "video": "/assets/story4/Story_0004_Tatiana-Lares.mp4",
-      "videoDuration": 41,
+      "cover": "Story_0004_Tatiana-Lares_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -51,7 +51,7 @@
       "avatar": "/assets/story5/Story_0005_Andy-Fvng_Avatar.jpeg",
       "boomerang": "/assets/story5/Story_0005_Andy-Fvng_Boomerang.mp4",
       "video": "/assets/story5/Story_0005_Andy-Fvng.mp4",
-      "videoDuration": 36,
+      "cover": "Story_0005_Andy-Fvng_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -62,7 +62,7 @@
       "avatar": "/assets/story6/Story_0006_TherapyJeff_Avatar.jpg",
       "boomerang": "/assets/story6/Story_0006_TherapyJeff_Boomerang.mp4",
       "video": "/assets/story6/Story_0006_TherapyJeff.mp4",
-      "videoDuration": 55,
+      "cover": "Story_0006_TherapyJeff_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -73,7 +73,7 @@
       "avatar": "/assets/story7/Story_0007_LilyDoran_Avatar.jpg",
       "boomerang": "/assets/story7/Story_0007_LilyDoran_Boomerang.mp4",
       "video": "/assets/story7/Story_0007_LilyDoran.mp4",
-      "videoDuration": 31,
+      "cover": "Story_0007_LilyDoran_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -84,7 +84,7 @@
       "avatar": "/assets/story8/Story_0008_Brit-Palmer_Avatar.jpg",
       "boomerang": "/assets/story8/Story_0008_Brit-Palmer_Boomerang.mp4",
       "video": "/assets/story8/Story_0008_Brit-Palmer.mp4",
-      "videoDuration": 20,
+      "cover": "Story_0008_Brit-Palmer_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -95,7 +95,7 @@
       "avatar": "/assets/story9/Story_0009_Money-Ben_Avatar.jpg",
       "boomerang": "/assets/story9/Story_0009_Money-Ben_Boomerang.mp4",
       "video": "/assets/story9/Story_0009_Money-Ben.mp4",
-      "videoDuration": 22,
+      "cover": "Story_0009_Money-Ben_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -106,7 +106,7 @@
       "avatar": "/assets/story10/Story_00010_LaynesLife_Avatar.jpg",
       "boomerang": "/assets/story10/Story_00010_LaynesLife_Boomerang.mp4",
       "video": "/assets/story10/Story_00010_LaynesLife.mp4",
-      "videoDuration": 6,
+      "cover": "Story_00010_LaynesLife_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -117,7 +117,7 @@
       "avatar": "/assets/story11/Story_00011_Anto-Lokhorst_Avatar.jpg",
       "boomerang": "/assets/story11/Story_00011_Anto-Lokhorst_Boomerang.mp4",
       "video": "/assets/story11/Story_00011_Anto-Lokhorst.mp4",
-      "videoDuration": 13,
+      "cover": "Story_00011_Anto-Lokhorst_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -128,7 +128,7 @@
       "avatar": "/assets/story12/Story_00012_SukiSweetkill_Avatar.jpg",
       "boomerang": "/assets/story12/Story_00012_SukiSweetkill_Boomerang.mp4",
       "video": "/assets/story12/Story_00012_SukiSweetkill.mp4",
-      "videoDuration": 17,
+      "cover": "Story_00012_SukiSweetkill_Cover",
       "likes": 123,
       "comments": 50
     },
@@ -139,7 +139,7 @@
       "avatar": "/assets/story13/Story_00013_Stefana-Avara_Avatar.jpg",
       "boomerang": "/assets/story13/Story_00013_Stefana-Avara_Boomerang.mp4",
       "video": "/assets/story13/Story_00013_Stefana-Avara.mp4",
-      "videoDuration": 22,
+      "cover": "Story_00013_Stefana-Avara_Cover",
       "likes": 123,
       "comments": 50
     }

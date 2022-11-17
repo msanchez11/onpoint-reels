@@ -1,13 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/scrollbar";
+import "swiper/css/bundle";
 import data from "../../db/database.json";
 import breakpointConfig from "../../configs/shortsSwiperConfig.json";
 import DesktopVideo from "./DesktopVideo";
 import MobileVideo from "./MobileVideo";
 import useWidthDetect from "../../hooks/useWidthDetect";
+import velongLogo from "../../assets/velong_logo.svg";
 import "./styles.css";
 
 const ShortsCarousel = (props) => {
@@ -21,15 +20,18 @@ const ShortsCarousel = (props) => {
   return (
     <div className="shorts-main-wrapper">
       <div className="shorts-header">
-        <span>SUGGESTED CREATORS FOR YOU</span>
-        <span className="see-all" onClick={changeOpenLogin}>
-          SEE ALL
-        </span>
+        <span>Creators Voice</span>
+        <img
+          className="header-shorts-velong-logo"
+          src={velongLogo}
+          alt=""
+          onClick={changeOpenLogin}
+        />
       </div>
       <Swiper
         className="shorts-carrousel"
         modules={[Navigation, Scrollbar]}
-        breakpointsBase={"container"}
+        //breakpointsBase={"container"}
         breakpoints={breakpointConfig}
         navigation
       >

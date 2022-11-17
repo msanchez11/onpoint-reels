@@ -34,7 +34,6 @@ const ReelsCarousel = (props) => {
     if (videoIdSet.size === 0) {
       videoIdSet.add(prop);
     }
-    console.log(videoIdSet);
   };
 
   return (
@@ -45,10 +44,11 @@ const ReelsCarousel = (props) => {
         breakpoints={breakpointConfig}
         navigation
         centeredSlides
-        loop
+        //loop
         initialSlide={openInSlideX}
         onSlideChange={(swiper) => slideChanged(swiper.realIndex)}
         onSwiper={(swiper) => slideChanged(swiper.realIndex)}
+        simulateTouch={false}
       >
         {data.people.map((item) => (
           <SwiperSlide
