@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./styles.css";
 import { useSwiper, useSwiperSlide } from "swiper/react";
+import PlayIcon from "../../../assets/Play_icon.svg";
 
 const CustomVideoTag = (props) => {
   const { url, id, posterVid, isMuted, mustPlay } = props;
@@ -40,9 +41,11 @@ const CustomVideoTag = (props) => {
 
   return (
     <>
+      {mySwiperSlide.isActive && !isPlaying && (
+        <img className="modal-reels-play-icon" src={PlayIcon} alt="Play!" />
+      )}
       <video
         className="modal-reels-video"
-        //preload={inView ? 'auto' : 'none'}
         preload="none"
         poster={`assets/story${id}/${posterVid}.jpg`}
         ref={videoRef}

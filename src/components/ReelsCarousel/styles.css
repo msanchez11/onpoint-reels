@@ -3,9 +3,6 @@
   --min-duration: 0s;
   --paused-time: 0%;
 }
-/* #modal-reels .swiper-slide-duplicated {
-  display: none;
-} */
 
 /* COMMON SLIDES */
 #modal-reels .swiper-slide {
