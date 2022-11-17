@@ -3,7 +3,6 @@ import "./App.css";
 import ModalLogin from "./components/ModalLogin";
 import ModalReels from "./components/ModalReels";
 import StoriesCarousel from "./components/StoriesCarousel";
-import ShortsCarousel from "./components/ShortsCarousel";
 
 function App() {
   const [goToSlide, setGoToSlide] = useState(0);
@@ -17,11 +16,6 @@ function App() {
   return (
     <div id="stories-app" className="stories-body">
       <StoriesCarousel
-        setGoToSlide={setGoToSlide}
-        changeOpenReels={toggleOpenReels}
-        changeOpenLogin={toggleOpenLogin}
-      />
-      <ShortsCarousel
         setGoToSlide={setGoToSlide}
         changeOpenReels={toggleOpenReels}
         changeOpenLogin={toggleOpenLogin}
