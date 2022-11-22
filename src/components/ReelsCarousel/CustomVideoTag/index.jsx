@@ -42,7 +42,12 @@ const CustomVideoTag = (props) => {
   return (
     <>
       {mySwiperSlide.isActive && !isPlaying && (
-        <img className="modal-reels-play-icon" src={PlayIcon} alt="Play!" />
+        <img
+          className="modal-reels-play-icon"
+          src={PlayIcon}
+          alt="Play!"
+          onClick={playOrPauseVideo}
+        />
       )}
       <video
         className="modal-reels-video"
