@@ -52,7 +52,7 @@
 }
 .btns-container .sign-in-separator span {
   color: white;
-  margin: 0 10px;
+  margin: 0 10px !important;
 }
 
 .btns-container .log-in {
@@ -71,7 +71,7 @@
 }
 .sign-container p {
   color: white;
-  margin-right: 5px;
+  margin: 0 5px 0 0 !important;
 }
 .sign-container span {
   color: #2c93f3;
