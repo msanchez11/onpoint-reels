@@ -54,7 +54,7 @@
   left: 5%;
 }
 #modal-reels .swiper-slide-active .comm-head p {
-  margin-right: 10px;
+  margin: 0 10px 0 0 !important;
 }
 #modal-reels .swiper-slide-active > .comm-wrapper img {
   width: 322px;
