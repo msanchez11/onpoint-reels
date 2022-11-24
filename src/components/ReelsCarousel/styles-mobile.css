@@ -1,4 +1,15 @@
-@media only screen and (max-width: 2560px) {
+@media only screen and (max-width: 5000px) {
+  #modal-reels .swiper-wrapper {
+    margin-left: 0;
+  }
+  #modal-reels .reels-carrousel .swiper-button-next {
+    right: 39.5% !important;
+  }
+  #modal-reels .reels-carrousel .swiper-button-prev {
+    left: 39.5% !important;
+  }
+}
+@media only screen and (max-width: 3000px) {
   #modal-reels .swiper-wrapper {
     margin-left: 0;
   }
