@@ -120,6 +120,21 @@
   }
 }
 
+@media only screen and (max-width: 1470px) {
+  #modal-reels .swiper-wrapper {
+    margin-left: -55px !important;
+  }
+  #modal-reels .swiper-slide-active {
+    width: 380px !important;
+    position: relative;
+  }
+  #modal-reels .reels-carrousel .swiper-button-next {
+    right: 33% !important;
+  }
+  #modal-reels .reels-carrousel .swiper-button-prev {
+    left: 33% !important;
+  }
+}
 @media only screen and (max-width: 1440px) {
   #modal-reels .swiper-wrapper {
     margin-left: -50px !important;
