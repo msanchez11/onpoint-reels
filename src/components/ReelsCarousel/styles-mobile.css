@@ -122,7 +122,7 @@
 
 @media only screen and (max-width: 1470px) {
   #modal-reels .swiper-wrapper {
-    margin-left: -50px !important;
+    margin-left: -48px !important;
   }
   #modal-reels .swiper-slide-active {
     width: 380px !important;
